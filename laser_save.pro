@@ -1,8 +1,10 @@
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    apiservice.cpp
 
-QT += widgets
+QT += widgets network
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    apiservice.h
