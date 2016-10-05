@@ -155,9 +155,9 @@ void MainWindow::handleApiResponse(QByteArray response) {
 }
 
 void MainWindow::_setLoginError(QString s) {
-    _loginOutput->setText(tr("<span style='color: red'>Erreur: " + s + "</span>"));
+    _loginOutput->setText("<span style='color: red'>Erreur: " + s + "</span>");
 }
 
 void MainWindow::_setLoginSuccess(QString s) {
-    _loginOutput->setText(tr("<span style='color: green'>" + s + "</span>"));
+    _loginOutput->setText("<span style='color: green'>" + s + "</span>");
 }
