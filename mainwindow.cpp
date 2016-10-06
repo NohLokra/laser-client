@@ -64,6 +64,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
     //WebService
     _api = new ApiService();
     connect(_api, SIGNAL(responseReceived(QByteArray)), this, SLOT(handleApiResponse(QByteArray)));
+    _logManager(_logs);
 }
 
 MainWindow::~MainWindow()
@@ -111,7 +112,7 @@ void MainWindow::setViewIndex(int index) {
     setView(p);
 }
 
-void MainWindow::getToken() {
+void MainWindow::sl_getToken() {
     QString username = _login->text();
     QString password = _password->text();
 
@@ -133,6 +134,7 @@ void MainWindow::handleApiResponse(QByteArray response) {
             _logged = true;
             _token = object.value("token").toString();
             _setLoginSuccess(tr("Connexion effectuée avec succès."));
+            this->watchLaserFile();
         }
     } else if ( action == "logout" ) {
         if ( !success ) {
@@ -151,7 +153,6 @@ void MainWindow::handleApiResponse(QByteArray response) {
     }
 
     qDebug() << response;
-
 }
 
 void MainWindow::_setLoginError(QString s) {
@@ -160,4 +161,19 @@ void MainWindow::_setLoginError(QString s) {
 
 void MainWindow::_setLoginSuccess(QString s) {
     _loginOutput->setText("<span style='color: green'>" + s + "</span>");
+}
+
+void MainWindow::watchLaserFile() {
+
+#ifdef QT_DEBUG
+    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt"; //TODO
+#else
+    QString path = "C:/"; //TODO
+#endif
+    FileWatcher *fw = new FileWatcher(path);
+    fw.connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
+}
+
+void MainWindow::sl_fileContentCanged(QString content) {
+    _logManager.log("Contenu du fichier envoyé à la base de données");
 }

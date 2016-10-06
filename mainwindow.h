@@ -17,6 +17,9 @@
 #include <QJsonValue>
 
 #include "apiservice.h"
+#include "filewatcher.h"
+#include "mainwindow.h"
+#include "logmanager.h"
 
 enum Page {
     Home = 0,
@@ -35,6 +38,7 @@ public:
     int getCurrentViewIndex();
     void setView(Page);
     void setViewIndex(int);
+    void watchLaserFile();
 
 signals:
 
@@ -42,7 +46,8 @@ public slots:
     void setViewOnCredentials();
     void setViewOnHome();
     void handleApiResponse(QByteArray);
-    void getToken();
+    void sl_getToken();
+    void sl_fileContentCanged(QString content);
 
 private:
     //Navigation
@@ -73,6 +78,8 @@ private:
     ApiService *_api;
     QString _token;
     bool _logged;
+    LogManager _logManager;
+
 
     void _setLoginError(QString s);
     void _setLoginSuccess(QString s);
