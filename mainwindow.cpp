@@ -120,6 +120,8 @@ void MainWindow::sl_getToken() {
 }
 
 void MainWindow::handleApiResponse(QByteArray response) {
+    qDebug() << response;
+
     QJsonDocument document = QJsonDocument::fromJson(response);
     QJsonObject object = document.object();
 
@@ -151,8 +153,6 @@ void MainWindow::handleApiResponse(QByteArray response) {
 
         }
     }
-
-    qDebug() << response;
 }
 
 void MainWindow::_setLoginError(QString s) {
@@ -164,7 +164,6 @@ void MainWindow::_setLoginSuccess(QString s) {
 }
 
 void MainWindow::watchLaserFile() {
-
 #ifdef QT_DEBUG
     QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
 #else
@@ -172,9 +171,11 @@ void MainWindow::watchLaserFile() {
 #endif
     FileWatcher *fw = new FileWatcher(path);
     connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
+    qDebug() << "Watching laser file";
 }
 
 void MainWindow::sl_fileContentCanged(QString content) {
+    qDebug() << "New content: " << content;
     _logManager->log("Contenu du fichier envoyé à la base de données");
     this->_api->submit(content, _token);
 }
