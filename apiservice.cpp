@@ -39,15 +39,6 @@ void ApiService::submit(QString text) {
     this->_networkManager->post(request, postDatas);
 }
 
-void ApiService::sl_requestFinished(QNetworkReply* r) {
-    if ( r->error() ) emit this->responseReceived(QByteArray(r->errorString().toStdString().c_str()));
-    else emit this->responseReceived(r->readAll());
-}
-
-QUrl ApiService::_generateFullUrl(QString action) {
-    return this->_baseUrl + action;
-}
-
 void ApiService::logout(QString token) {
     QUrl url = this->_generateFullUrl("logout");
 
@@ -59,3 +50,13 @@ void ApiService::logout(QString token) {
 
     this->_networkManager->post(request, postDatas);
 }
+
+void ApiService::sl_requestFinished(QNetworkReply* r) {
+    if ( r->error() ) emit this->responseReceived(QByteArray(r->errorString().toStdString().c_str()));
+    else emit this->responseReceived(r->readAll());
+}
+
+QUrl ApiService::_generateFullUrl(QString action) {
+    return this->_baseUrl + action;
+}
+
