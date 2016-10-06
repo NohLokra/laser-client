@@ -13,7 +13,7 @@ public:
     ApiService();
     ~ApiService();
     void generateToken(QString user, QString password);
-    void submit(QString text);
+    void submit(QString text, QString token);
     void logout(QString token);
 
 signals:

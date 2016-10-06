@@ -28,7 +28,7 @@ void ApiService::generateToken(QString user, QString password) {
     this->_networkManager->post(request, postDatas);
 }
 
-void ApiService::submit(QString text) {
+void ApiService::submit(QString text, QString token) {
     QUrl finalUrl = this->_generateFullUrl("submit");
     QNetworkRequest request(finalUrl);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");

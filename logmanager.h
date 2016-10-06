@@ -7,7 +7,7 @@
 class LogManager
 {
 public:
-    LogManager(QTextEdit* logWindow);
+    LogManager(QTextEdit* logWindow = NULL);
     ~LogManager();
 
 public slots:

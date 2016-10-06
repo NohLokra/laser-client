@@ -78,7 +78,7 @@ private:
     ApiService *_api;
     QString _token;
     bool _logged;
-    LogManager _logManager;
+    LogManager* _logManager;
 
 
     void _setLoginError(QString s);

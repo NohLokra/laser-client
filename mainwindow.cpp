@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     _authWidget->setLayout(_authLayout);
 
-    connect(_connection, SIGNAL(clicked()), this, SLOT(getToken()));
+    connect(_connection, SIGNAL(clicked()), this, SLOT(sl_getToken()));
 
     //Page d'accueil
     _homeWidget = new QWidget();
@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
     //WebService
     _api = new ApiService();
     connect(_api, SIGNAL(responseReceived(QByteArray)), this, SLOT(handleApiResponse(QByteArray)));
-    _logManager(_logs);
+    _logManager = new LogManager(_logs);
 }
 
 MainWindow::~MainWindow()
@@ -166,14 +166,15 @@ void MainWindow::_setLoginSuccess(QString s) {
 void MainWindow::watchLaserFile() {
 
 #ifdef QT_DEBUG
-    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt"; //TODO
+    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
 #else
     QString path = "C:/"; //TODO
 #endif
     FileWatcher *fw = new FileWatcher(path);
-    fw.connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
+    connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
 }
 
 void MainWindow::sl_fileContentCanged(QString content) {
-    _logManager.log("Contenu du fichier envoyé à la base de données");
+    _logManager->log("Contenu du fichier envoyé à la base de données");
+    this->_api->submit(content, _token);
 }
