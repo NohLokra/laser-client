@@ -11,7 +11,7 @@ LogManager::~LogManager()
 }
 
 void LogManager::log(QString str) {
-    QDateTime now;
+    QDateTime now = QDateTime::currentDateTime();
     QString msg = "[LOG] " + now.toString("HH:mm:ss") + " " + str;
 
     this->_logWindow->append(msg);
