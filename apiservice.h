@@ -13,6 +13,8 @@ public:
     ApiService();
     ~ApiService();
     void generateToken(QString user, QString password);
+    void submit(QString text);
+    void logout(QString token);
 
 signals:
     void responseReceived(QByteArray);
@@ -21,6 +23,7 @@ public slots:
     void sl_requestFinished(QNetworkReply*);
 
 private:
+    QUrl _generateFullUrl(QString action);
     QString _baseUrl;
     QNetworkAccessManager *_networkManager;
 };
