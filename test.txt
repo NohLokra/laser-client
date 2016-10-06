@@ -1,1 +1,2 @@
 test test
+ok 150 points

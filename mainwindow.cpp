@@ -169,8 +169,9 @@ void MainWindow::watchLaserFile() {
 #else
     QString path = "C:/"; //TODO
 #endif
-    FileWatcher *fw = new FileWatcher(path);
+    FileWatcher *fw = new FileWatcher();
     connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
+    fw->watch(path);
     qDebug() << "Watching laser file";
 }
 

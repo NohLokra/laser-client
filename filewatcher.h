@@ -15,7 +15,7 @@ class FileWatcher : public QFileSystemWatcher
     Q_OBJECT
 
 public:
-    FileWatcher(QString path = "");
+    FileWatcher();
     ~FileWatcher();
     void watch(QString path);
 

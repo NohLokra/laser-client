@@ -1,7 +1,8 @@
 #include "filewatcher.h"
 
-FileWatcher::FileWatcher(QString path) : QFileSystemWatcher(), _filePath(path)
+FileWatcher::FileWatcher() : QFileSystemWatcher()
 {
+    _filePath = "";
     connect(this, SIGNAL(fileChanged(QString)), this, SLOT(sl_fileChanged(QString)));
 }
 
@@ -13,6 +14,7 @@ FileWatcher::~FileWatcher()
 void FileWatcher::watch(QString path) {
     if ( this->_filePath == "" ) {
         this->_filePath = path;
+        this->addPath(this->_filePath);
     } else {
         throw "FileWatcher already watching. Call to watch() not allowed";
     }
