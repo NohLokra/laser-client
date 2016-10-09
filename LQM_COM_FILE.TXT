@@ -1,0 +1,1661 @@
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+SYNARIOX  
+PACK ID
+33
+START HIT LIST
+HIT:R|DDPINCH   | 2|  | 1|  |  13|
+SHOT:R|DDPINCH   | 1| 2| 6|  |  90|
+HIT:R|BARDA     | 1|  | 8| 2|  35|
+SHOT:R|BARDA     | 1| 1|12|11| 250|
+HIT:R|JUJU      |  | 1|  | 2|  10|
+SHOT:R|JUJU      | 3| 1| 2| 4| 100|
+HIT:R|JULIEN    | 1| 1| 2| 1|  18|
+SHOT:R|JULIEN    | 3|  | 2| 4|  90|
+HIT:R|SUIJIN    | 2|  | 2| 1|  19|
+SHOT:R|SUIJIN    | 4| 5| 8| 8| 250|
+HIT:R|DIAMKAPPA | 1| 1|  | 1|  12|
+SHOT:R|DIAMKAPPA | 1| 1| 5|  |  70|
+HIT:R|ZOZO      | 1|  |  | 2|  11|
+SHOT:R|ZOZO      | 2|  | 3| 2|  70|
+HIT:B|KARIKOU   |  |  | 1|  |   3|
+SHOT:B|KARIKOU   | 2| 1| 3|  |  60|
+HIT:B|AOLYN     |  | 1|  | 1|   7|
+SHOT:B|AOLYN     | 5| 1| 7| 2| 150|
+HIT:B|EL DOUCHE | 2| 1| 4| 1|  29|
+SHOT:B|EL DOUCHE | 6| 2| 8| 4| 200|
+HIT:B|THECHOSENS| 1|  |  | 1|   8|
+SHOT:B|THECHOSENS| 1| 1| 3| 2|  70|
+HIT:B|MANU      |  |  | 2|  |   6|
+SHOT:B|MANU      | 1| 3| 5| 1| 100|
+HIT:B|EL MACHO  |  | 1|  |  |   4|
+SHOT:B|EL MACHO  | 2| 1| 5| 1|  90|
+HIT:B|LE MAESTRO|  | 2| 1|  |  11|
+SHOT:B|LE MAESTRO| 1|  | 3| 5|  90|
+HIT:B|DRAK      | 3|  | 2|13|  60|
+SHOT:B|DRAK      | 5| 3| 8| 4| 200|
+END HIT LIST
+TOTAL HIT
+14| 8|23|25| 246|
+TOTAL SHOT
+38|22|80|48|1880|
+BEGIN ADVERTS
+TON RANG : SUPERHERO et nouvelle recrue des AVENGERS!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+SYNARIOX  
+Game|player NR
+TEAM      |23
+Centre Shots
+2408| 7|01|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+ 1704
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+DRAK      
+PACK ID
+34
+START HIT LIST
+HIT:R|DDPINCH   | 1| 1| 3|  |  18|
+SHOT:R|DDPINCH   | 2|  | 3|  |  50|
+HIT:R|BARDA     | 1| 2| 3| 1|  25|
+SHOT:R|BARDA     | 2| 2| 2| 1|  70|
+SHOT:R|JULIEN    | 1| 2| 1|  |  40|
+HIT:R|SUIJIN    | 1|  | 3| 1|  17|
+SHOT:R|SUIJIN    | 1|  | 1| 1|  30|
+HIT:R|DIAMKAPPA |  |  | 1|  |   3|
+SHOT:R|DIAMKAPPA | 1|  |  |  |  10|
+HIT:R|ZOZO      |10| 4|22| 7| 153|
+SHOT:R|ZOZO      | 3| 3|11|41| 580|
+HIT:P|MASTER SHI|  |  | 2|  |   6|
+SHOT:P|MASTER SHI| 2|  | 1|  |  30|
+SHOT:P|POULPOUZOU|  | 2| 6| 1|  90|
+HIT:P|JOHNNY    |  |  | 1|  |   3|
+SHOT:P|JOHNNY    | 2| 1| 4|  |  70|
+HIT:P|FISTOUILLE| 3| 1| 2|  |  25|
+SHOT:P|FISTOUILLE|  | 1| 2| 2|  50|
+HIT:P|UNICORN FO| 3|  |  |  |  15|
+SHOT:P|UNICORN FO|  | 1|  | 2|  30|
+HIT:P|GIBSOU    | 1| 2|  | 1|  16|
+SHOT:P|GIBSOU    | 3|  | 1|  |  40|
+SHOT:P|RACAOH    | 1| 1| 1|  |  30|
+HIT:P|SYNARIOX  | 5| 3| 8| 4|  73|
+SHOT:P|SYNARIOX  | 3|  | 2|13| 180|
+END HIT LIST
+TOTAL HIT
+25|13|45|14| 354|
+TOTAL SHOT
+21|13|35|61|1300|
+BEGIN ADVERTS
+TON RANG : SUPERHERO et nouvelle recrue des AVENGERS!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+DRAK      
+Game|player NR
+TEAM      |23
+Centre Shots
+1845| 7|02|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+ 1016
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+FISTOUILLE
+PACK ID
+15
+START HIT LIST
+HIT:R|DDPINCH   | 1| 1| 1|  |  12|
+SHOT:R|DDPINCH   | 4| 2|  |  |  60|
+HIT:R|BARDA     | 5|  | 2| 1|  34|
+SHOT:R|BARDA     | 3| 2| 3| 3| 110|
+HIT:R|JUJU      |  | 2|  |  |   8|
+SHOT:R|JUJU      | 2| 1|  | 3|  60|
+HIT:R|JULIEN    |  |  | 1| 2|   9|
+SHOT:R|JULIEN    |  | 1| 3|  |  40|
+HIT:R|SUIJIN    |  | 2|  | 1|  11|
+SHOT:R|SUIJIN    | 1|  | 2| 1|  40|
+HIT:R|DIAMKAPPA | 1|  | 5|  |  20|
+SHOT:R|DIAMKAPPA | 2| 1| 3|  |  60|
+HIT:R|ZOZO      | 1|  |  |  |   5|
+SHOT:R|ZOZO      | 2| 2|  | 1|  50|
+HIT:B|KARIKOU   | 1|  | 2|  |  11|
+SHOT:B|KARIKOU   |  | 1| 2|  |  30|
+HIT:B|AOLYN     |  |  | 1|  |   3|
+SHOT:B|AOLYN     |  | 2| 4|  |  60|
+HIT:B|EL DOUCHE |  |  | 5| 3|  24|
+SHOT:B|EL DOUCHE | 2| 3| 3| 3| 110|
+HIT:B|THECHOSENS| 1|  | 1| 1|  11|
+SHOT:B|THECHOSENS| 3| 1| 3| 2|  90|
+HIT:B|MANU      |  | 1| 4|  |  16|
+SHOT:B|MANU      |  | 2| 2|  |  40|
+HIT:B|EL MACHO  |  | 1| 3|  |  13|
+SHOT:B|EL MACHO  | 2| 1| 3| 2|  80|
+HIT:B|LE MAESTRO| 1|  |  |  |   5|
+SHOT:B|LE MAESTRO|  | 2|  | 1|  30|
+HIT:B|DRAK      |  | 1| 2| 2|  16|
+SHOT:B|DRAK      | 3| 1| 2|  |  60|
+END HIT LIST
+TOTAL HIT
+11| 8|27|10| 198|
+TOTAL SHOT
+24|22|30|16| 920|
+BEGIN ADVERTS
+TON RANG : HERO bientôt un nouveau Expendable!??
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+FISTOUILLE
+Game|player NR
+TEAM      |23
+Centre Shots
+ 717|12|03|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  822
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+BARDA     
+PACK ID
+19
+START HIT LIST
+HIT:B|KARIKOU   | 1|  | 1|  |   8|
+SHOT:B|KARIKOU   | 1| 1|  | 1|  30|
+HIT:B|AOLYN     |  | 1| 1| 1|  10|
+SHOT:B|AOLYN     | 2|  |  | 1|  30|
+HIT:B|EL DOUCHE |  | 2| 4|  |  20|
+SHOT:B|EL DOUCHE | 2| 1| 2| 2|  70|
+HIT:B|THECHOSENS|  |  | 1|  |   3|
+SHOT:B|THECHOSENS| 1| 1|  | 1|  30|
+HIT:B|MANU      |  |  | 1|  |   3|
+SHOT:B|MANU      | 1|  | 4| 2|  70|
+HIT:B|EL MACHO  |  | 1| 1|  |   7|
+SHOT:B|EL MACHO  |  |  | 3|  |  30|
+HIT:B|LE MAESTRO| 1|  | 3|  |  14|
+SHOT:B|LE MAESTRO| 1| 2| 5| 1|  90|
+HIT:B|DRAK      | 2| 2| 2| 1|  27|
+SHOT:B|DRAK      | 1| 2| 3| 1|  70|
+HIT:P|MASTER SHI|  |  | 3| 2|  15|
+SHOT:P|MASTER SHI|  | 1| 4| 2|  70|
+HIT:P|POULPOUZOU| 2|  |  |  |  10|
+SHOT:P|POULPOUZOU| 2|  | 2| 2|  60|
+HIT:P|JOHNNY    |  |  | 3|  |   9|
+SHOT:P|JOHNNY    | 1|  | 3| 2|  60|
+HIT:P|FISTOUILLE| 3| 2| 3| 3|  41|
+SHOT:P|FISTOUILLE| 5|  | 2| 1|  80|
+HIT:P|UNICORN FO| 2|  |  |  |  10|
+SHOT:P|UNICORN FO| 2| 2| 2| 2|  80|
+HIT:P|GIBSOU    | 2| 1| 3|  |  23|
+SHOT:P|GIBSOU    | 4|  | 4| 3| 110|
+HIT:P|RACAOH    | 1|  |  |  |   5|
+SHOT:P|RACAOH    | 1| 1| 1|  |  30|
+HIT:P|SYNARIOX  | 1| 1|12|11|  78|
+SHOT:P|SYNARIOX  | 1|  | 8| 2| 110|
+END HIT LIST
+TOTAL HIT
+15|10|38|18| 283|
+TOTAL SHOT
+25|11|43|23|1020|
+BEGIN ADVERTS
+TON RANG : HERO bientôt un nouveau Expendable!??
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+BARDA     
+Game|player NR
+TEAM      |23
+Centre Shots
+1173| 8|04|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  817
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+SUIJIN    
+PACK ID
+22
+START HIT LIST
+HIT:B|KARIKOU   |  |  | 1|  |   3|
+SHOT:B|KARIKOU   | 3|  | 1| 1|  50|
+HIT:B|AOLYN     | 1| 1|  |  |   9|
+SHOT:B|AOLYN     |  | 2| 1| 3|  60|
+HIT:B|EL DOUCHE |  | 1| 4| 3|  25|
+SHOT:B|EL DOUCHE | 1| 1| 3| 1|  60|
+SHOT:B|THECHOSENS| 1|  | 1| 1|  30|
+HIT:B|MANU      | 1|  | 3|  |  14|
+SHOT:B|MANU      | 1|  | 2| 2|  50|
+HIT:B|EL MACHO  | 1| 1| 1| 1|  15|
+SHOT:B|EL MACHO  | 1| 1| 1| 2|  50|
+HIT:B|LE MAESTRO| 2| 1| 1|  |  17|
+SHOT:B|LE MAESTRO| 3| 2| 3| 1|  90|
+HIT:B|DRAK      | 1|  | 1| 1|  11|
+SHOT:B|DRAK      | 1|  | 3| 1|  50|
+HIT:P|MASTER SHI| 3|  | 1| 4|  30|
+SHOT:P|MASTER SHI| 1| 1| 1| 1|  40|
+HIT:P|POULPOUZOU| 1|  | 1|  |   8|
+SHOT:P|POULPOUZOU| 4| 1| 2| 1|  80|
+HIT:P|JOHNNY    |  |  |  | 1|   3|
+SHOT:P|JOHNNY    |  |  | 3| 2|  50|
+HIT:P|FISTOUILLE| 1|  | 2| 1|  14|
+SHOT:P|FISTOUILLE|  | 2|  | 1|  30|
+HIT:P|UNICORN FO| 2|  |  |  |  10|
+SHOT:P|UNICORN FO| 2| 2|  | 1|  50|
+HIT:P|GIBSOU    |  | 1| 3| 2|  19|
+SHOT:P|GIBSOU    | 2| 1| 5| 2| 100|
+HIT:P|RACAOH    |  | 1|  | 2|  10|
+SHOT:P|RACAOH    | 2| 2| 3|  |  70|
+HIT:P|SYNARIOX  | 4| 5| 8| 8|  88|
+SHOT:P|SYNARIOX  | 2|  | 2| 1|  50|
+END HIT LIST
+TOTAL HIT
+17|11|26|23| 276|
+TOTAL SHOT
+24|15|31|21| 910|
+BEGIN ADVERTS
+TON RANG :ROBOCOP Vous etes la justice !!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+SUIJIN    
+Game|player NR
+TEAM      |23
+Centre Shots
+ 871|10|05|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  734
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+MASTER SHI
+PACK ID
+12
+START HIT LIST
+HIT:R|DDPINCH   |  | 1|  | 1|   7|
+SHOT:R|DDPINCH   |  | 3| 1|  |  40|
+HIT:R|BARDA     |  | 1| 4| 2|  22|
+SHOT:R|BARDA     |  |  | 3| 2|  50|
+HIT:R|JUJU      |  |  | 3| 1|  12|
+SHOT:R|JUJU      | 3| 1| 1| 2|  70|
+HIT:R|JULIEN    |  |  | 2| 1|   9|
+SHOT:R|JULIEN    | 1|  | 1| 1|  30|
+HIT:R|SUIJIN    | 1| 1| 1| 1|  15|
+SHOT:R|SUIJIN    | 3|  | 1| 4|  80|
+HIT:R|DIAMKAPPA |  | 1| 4| 1|  19|
+SHOT:R|DIAMKAPPA | 3| 3| 4| 1| 110|
+HIT:R|ZOZO      | 3|  |  | 1|  18|
+SHOT:R|ZOZO      | 1|  | 2| 1|  40|
+HIT:B|KARIKOU   | 1| 1|  |  |   9|
+SHOT:B|KARIKOU   | 1|  | 1| 1|  30|
+HIT:B|AOLYN     | 2|  | 2| 1|  19|
+SHOT:B|AOLYN     | 3| 2| 4| 1| 100|
+HIT:B|EL DOUCHE | 1|  |  | 2|  11|
+SHOT:B|EL DOUCHE | 2| 2| 3| 1|  80|
+HIT:B|THECHOSENS|  | 1| 4| 1|  19|
+SHOT:B|THECHOSENS| 4|  | 4| 2| 100|
+HIT:B|MANU      | 1|  |  | 1|   8|
+SHOT:B|MANU      | 2|  |  |  |  20|
+HIT:B|EL MACHO  | 1|  | 3| 2|  20|
+SHOT:B|EL MACHO  |  | 1| 1|  |  20|
+SHOT:B|LE MAESTRO| 3| 1| 1|  |  50|
+HIT:B|DRAK      | 2|  | 1|  |  13|
+SHOT:B|DRAK      |  |  | 2|  |  20|
+END HIT LIST
+TOTAL HIT
+12| 6|24|15| 201|
+TOTAL SHOT
+26|13|29|16| 840|
+BEGIN ADVERTS
+TON RANG :ROBOCOP Vous etes la justice !!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+MASTER SHI
+Game|player NR
+TEAM      |23
+Centre Shots
+ 952| 8|06|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  719
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+ZOZO      
+PACK ID
+32
+START HIT LIST
+HIT:B|KARIKOU   |  |  |  | 1|   3|
+SHOT:B|KARIKOU   |  |  | 2| 1|  30|
+HIT:B|AOLYN     | 1| 1| 1|  |  12|
+SHOT:B|AOLYN     | 2|  | 1|  |  30|
+HIT:B|EL DOUCHE |  |  | 3| 2|  15|
+SHOT:B|EL DOUCHE |  |  | 3| 2|  50|
+HIT:B|THECHOSENS| 1| 1| 2| 1|  18|
+SHOT:B|THECHOSENS|  | 1| 2| 1|  40|
+HIT:B|MANU      |  | 3| 1|  |  15|
+SHOT:B|MANU      | 1|  | 1| 1|  30|
+HIT:B|EL MACHO  | 1|  | 3|  |  14|
+SHOT:B|EL MACHO  |  |  | 4| 1|  50|
+SHOT:B|LE MAESTRO| 1| 1| 3| 2|  70|
+HIT:B|DRAK      | 3| 3|11|41| 183|
+SHOT:B|DRAK      |10| 4|22| 7| 430|
+HIT:P|MASTER SHI| 1|  | 2| 1|  14|
+SHOT:P|MASTER SHI| 3|  |  | 1|  40|
+HIT:P|POULPOUZOU| 1| 1|  |  |   9|
+SHOT:P|POULPOUZOU|  |  | 1|  |  10|
+HIT:P|JOHNNY    | 2|  |  |  |  10|
+SHOT:P|JOHNNY    |  |  | 3|  |  30|
+HIT:P|FISTOUILLE| 2| 2|  | 1|  21|
+SHOT:P|FISTOUILLE| 1|  |  |  |  10|
+HIT:P|UNICORN FO|  |  | 1|  |   3|
+SHOT:P|UNICORN FO| 1|  | 1|  |  20|
+HIT:P|GIBSOU    |  |  | 1|  |   3|
+SHOT:P|RACAOH    |  | 2| 3| 1|  60|
+HIT:P|SYNARIOX  | 2|  | 3| 2|  25|
+SHOT:P|SYNARIOX  | 1|  |  | 2|  30|
+END HIT LIST
+TOTAL HIT
+14|11|28|49| 345|
+TOTAL SHOT
+20| 8|46|19| 930|
+BEGIN ADVERTS
+TON RANG : "Le HITMAN agent 47" agent secret!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+ZOZO      
+Game|player NR
+TEAM      |23
+Centre Shots
+1681| 5|07|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  635
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+DIAMKAPPA 
+PACK ID
+23
+START HIT LIST
+HIT:B|KARIKOU   |  |  | 2|  |   6|
+SHOT:B|KARIKOU   | 1| 5| 1|  |  70|
+HIT:B|AOLYN     | 2|  | 3| 1|  22|
+SHOT:B|AOLYN     | 3|  |  |  |  30|
+HIT:B|EL DOUCHE |  | 1| 2|  |  10|
+SHOT:B|EL DOUCHE |  |  | 1| 1|  20|
+HIT:B|THECHOSENS| 1| 1| 4| 2|  27|
+SHOT:B|THECHOSENS|  |  | 5| 1|  60|
+HIT:B|MANU      | 2|  | 3|  |  19|
+SHOT:B|MANU      | 3|  | 3|  |  60|
+HIT:B|EL MACHO  | 1|  | 1| 1|  11|
+SHOT:B|EL MACHO  | 2| 1| 2|  |  50|
+SHOT:B|LE MAESTRO| 2| 1|  | 2|  50|
+HIT:B|DRAK      | 1|  |  |  |   5|
+SHOT:B|DRAK      |  |  | 1|  |  10|
+HIT:P|MASTER SHI| 3| 3| 4| 1|  42|
+SHOT:P|MASTER SHI|  | 1| 4| 1|  60|
+HIT:P|POULPOUZOU| 2|  | 1| 1|  16|
+SHOT:P|POULPOUZOU| 1|  | 4|  |  50|
+HIT:P|JOHNNY    | 2|  | 1|  |  13|
+SHOT:P|JOHNNY    |  | 2|  |  |  20|
+HIT:P|FISTOUILLE| 2| 1| 3|  |  23|
+SHOT:P|FISTOUILLE| 1|  | 5|  |  60|
+HIT:P|UNICORN FO| 2| 1|  | 1|  17|
+SHOT:P|UNICORN FO| 1| 4| 1| 1|  70|
+HIT:P|GIBSOU    | 1|  | 1|  |   8|
+SHOT:P|GIBSOU    | 1| 2| 2|  |  50|
+HIT:P|RACAOH    |  | 1| 5| 1|  22|
+SHOT:P|RACAOH    | 1| 2| 1| 4|  80|
+HIT:P|SYNARIOX  | 1| 1| 5|  |  24|
+SHOT:P|SYNARIOX  | 1| 1|  | 1|  30|
+END HIT LIST
+TOTAL HIT
+20| 9|35| 8| 265|
+TOTAL SHOT
+17|19|30|11| 770|
+BEGIN ADVERTS
+TON RANG : "Le HITMAN agent 47" agent secret!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+DIAMKAPPA 
+Game|player NR
+TEAM      |23
+Centre Shots
+ 841| 9|08|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  595
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+DDPINCH   
+PACK ID
+18
+START HIT LIST
+HIT:B|KARIKOU   | 3|  | 4| 1|  30|
+SHOT:B|KARIKOU   | 2|  | 2|  |  40|
+HIT:B|AOLYN     | 1|  |  | 2|  11|
+SHOT:B|AOLYN     | 1| 3|  |  |  40|
+HIT:B|EL DOUCHE | 1| 1| 1|  |  12|
+SHOT:B|EL DOUCHE | 1| 2| 2| 1|  60|
+HIT:B|THECHOSENS|  |  |  | 2|   6|
+SHOT:B|THECHOSENS|  |  | 1|  |  10|
+HIT:B|MANU      |  |  | 3|  |   9|
+SHOT:B|MANU      | 1|  | 1| 1|  30|
+HIT:B|EL MACHO  |  | 1|  |  |   4|
+SHOT:B|EL MACHO  |  |  | 1| 2|  30|
+SHOT:B|LE MAESTRO| 1| 3| 2| 2|  80|
+HIT:B|DRAK      | 2|  | 3|  |  19|
+SHOT:B|DRAK      | 1| 1| 3|  |  50|
+HIT:P|MASTER SHI|  | 3| 1|  |  15|
+SHOT:P|MASTER SHI|  | 1|  | 1|  20|
+HIT:P|POULPOUZOU| 3|  | 1| 1|  21|
+SHOT:P|POULPOUZOU| 3| 1| 2|  |  60|
+HIT:P|JOHNNY    | 2| 1| 6| 1|  35|
+SHOT:P|JOHNNY    | 2| 2| 6| 3| 130|
+HIT:P|FISTOUILLE| 4| 2|  |  |  28|
+SHOT:P|FISTOUILLE| 1| 1| 1|  |  30|
+HIT:P|UNICORN FO| 1|  |  |  |   5|
+SHOT:P|UNICORN FO|  | 1|  | 1|  20|
+HIT:P|GIBSOU    | 1|  | 2|  |  11|
+SHOT:P|GIBSOU    |  |  | 4| 2|  60|
+HIT:P|RACAOH    | 1|  | 1|  |   8|
+SHOT:P|RACAOH    |  |  |  | 1|  10|
+HIT:P|SYNARIOX  | 1| 2| 6|  |  31|
+SHOT:P|SYNARIOX  | 2|  | 1|  |  30|
+END HIT LIST
+TOTAL HIT
+20|10|28| 7| 245|
+TOTAL SHOT
+15|15|26|14| 700|
+BEGIN ADVERTS
+TON RANG : "Le HITMAN agent 47" agent secret!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+DDPINCH   
+Game|player NR
+TEAM      |23
+Centre Shots
+ 560|12|09|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  555
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+EL DOUCHE 
+PACK ID
+27
+START HIT LIST
+HIT:R|DDPINCH   | 1| 2| 2| 1|  22|
+SHOT:R|DDPINCH   | 1| 1| 1|  |  30|
+HIT:R|BARDA     | 2| 1| 2| 2|  26|
+SHOT:R|BARDA     |  | 2| 4|  |  60|
+HIT:R|JUJU      |  | 1| 3| 1|  16|
+SHOT:R|JUJU      | 3|  | 1|  |  40|
+HIT:R|JULIEN    | 1|  | 1| 1|  11|
+SHOT:R|JULIEN    | 2| 1| 3| 1|  70|
+HIT:R|SUIJIN    | 1| 1| 3| 1|  21|
+SHOT:R|SUIJIN    |  | 1| 4| 3|  80|
+HIT:R|DIAMKAPPA |  |  | 1| 1|   6|
+SHOT:R|DIAMKAPPA |  | 1| 2|  |  30|
+HIT:R|ZOZO      |  |  | 3| 2|  15|
+SHOT:R|ZOZO      |  |  | 3| 2|  50|
+HIT:P|MASTER SHI| 2| 2| 3| 1|  30|
+SHOT:P|MASTER SHI| 1|  |  | 2|  30|
+HIT:P|POULPOUZOU| 2|  | 2| 1|  19|
+SHOT:P|POULPOUZOU|  | 2| 2|  |  40|
+HIT:P|JOHNNY    | 2|  | 3|  |  19|
+SHOT:P|JOHNNY    | 2| 5| 3|  | 100|
+HIT:P|FISTOUILLE| 2| 3| 3| 3|  40|
+SHOT:P|FISTOUILLE|  |  | 5| 3|  80|
+HIT:P|UNICORN FO|  |  |  | 1|   3|
+SHOT:P|UNICORN FO|  |  |  | 1|  10|
+HIT:P|GIBSOU    | 1| 1| 1|  |  12|
+SHOT:P|GIBSOU    |  | 2| 2| 2|  60|
+HIT:P|RACAOH    | 1| 1|  | 1|  12|
+SHOT:P|RACAOH    |  |  | 2| 1|  30|
+HIT:P|SYNARIOX  | 6| 2| 8| 4|  74|
+SHOT:P|SYNARIOX  | 2| 1| 4| 1|  80|
+END HIT LIST
+TOTAL HIT
+21|14|35|20| 326|
+TOTAL SHOT
+11|16|36|16| 790|
+BEGIN ADVERTS
+TON RANG : "Le HITMAN agent 47" agent secret!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+EL DOUCHE 
+Game|player NR
+TEAM      |23
+Centre Shots
+ 995| 7|10|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  534
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+MANU      
+PACK ID
+29
+START HIT LIST
+HIT:R|DDPINCH   | 1|  | 1| 1|  11|
+SHOT:R|DDPINCH   |  |  | 3|  |  30|
+HIT:R|BARDA     | 1|  | 4| 2|  23|
+SHOT:R|BARDA     |  |  | 1|  |  10|
+HIT:R|JUJU      | 1| 1| 1| 1|  15|
+SHOT:R|JUJU      | 3|  | 4| 2|  90|
+HIT:R|JULIEN    |  |  | 1|  |   3|
+SHOT:R|JULIEN    |  |  |  | 1|  10|
+HIT:R|SUIJIN    | 1|  | 2| 2|  17|
+SHOT:R|SUIJIN    | 1|  | 3|  |  40|
+HIT:R|DIAMKAPPA | 3|  | 3|  |  24|
+SHOT:R|DIAMKAPPA | 2|  | 3|  |  50|
+HIT:R|ZOZO      | 1|  | 1| 1|  11|
+SHOT:R|ZOZO      |  | 3| 1|  |  40|
+HIT:P|MASTER SHI| 2|  |  |  |  10|
+SHOT:P|MASTER SHI| 1|  |  | 1|  20|
+HIT:P|POULPOUZOU|  |  | 2|  |   6|
+SHOT:P|POULPOUZOU| 1| 2| 1| 1|  50|
+HIT:P|JOHNNY    | 1|  | 3| 1|  17|
+SHOT:P|JOHNNY    | 1| 1| 3|  |  50|
+HIT:P|FISTOUILLE|  | 2| 2|  |  14|
+SHOT:P|FISTOUILLE|  | 1| 4|  |  50|
+HIT:P|UNICORN FO| 2|  |  |  |  10|
+SHOT:P|UNICORN FO|  |  | 1|  |  10|
+HIT:P|GIBSOU    |  | 1|  |  |   4|
+SHOT:P|GIBSOU    | 1| 1|  |  |  20|
+HIT:P|RACAOH    | 2| 1|  | 1|  17|
+SHOT:P|RACAOH    | 2| 1| 2| 1|  60|
+HIT:P|SYNARIOX  | 1| 3| 5| 1|  35|
+SHOT:P|SYNARIOX  |  |  | 2|  |  20|
+END HIT LIST
+TOTAL HIT
+16| 8|25|10| 217|
+TOTAL SHOT
+12| 9|28| 6| 550|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+MANU      
+Game|player NR
+TEAM      |23
+Centre Shots
+ 359|15|11|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  433
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+KARIKOU   
+PACK ID
+24
+START HIT LIST
+HIT:R|DDPINCH   | 2|  | 2|  |  16|
+SHOT:R|DDPINCH   | 3|  | 4| 1|  80|
+HIT:R|BARDA     | 1| 1|  | 1|  12|
+SHOT:R|BARDA     | 1|  | 1|  |  20|
+SHOT:R|JUJU      | 1|  | 4| 1|  60|
+HIT:R|JULIEN    | 1| 2| 2|  |  19|
+SHOT:R|JULIEN    |  | 1| 2| 1|  40|
+HIT:R|SUIJIN    | 3|  | 1| 1|  21|
+SHOT:R|SUIJIN    |  |  | 1|  |  10|
+HIT:R|DIAMKAPPA | 1| 5| 1|  |  28|
+SHOT:R|DIAMKAPPA |  |  | 2|  |  20|
+HIT:R|ZOZO      |  |  | 2| 1|   9|
+SHOT:R|ZOZO      |  |  |  | 1|  10|
+HIT:P|MASTER SHI| 1|  | 1| 1|  11|
+SHOT:P|MASTER SHI| 1| 1|  |  |  20|
+HIT:P|POULPOUZOU| 1| 1| 2|  |  15|
+SHOT:P|POULPOUZOU| 3| 1| 2| 1|  70|
+HIT:P|JOHNNY    |  | 1| 2| 1|  13|
+SHOT:P|JOHNNY    | 2| 1| 5|  |  80|
+HIT:P|FISTOUILLE|  | 1| 2|  |  10|
+SHOT:P|FISTOUILLE| 1|  | 2|  |  30|
+HIT:P|UNICORN FO|  | 1| 2| 1|  13|
+SHOT:P|UNICORN FO| 2| 1| 2|  |  50|
+HIT:P|GIBSOU    |  | 1| 2|  |  10|
+SHOT:P|GIBSOU    | 1|  | 1|  |  20|
+HIT:P|RACAOH    | 1| 1|  | 1|  12|
+SHOT:P|RACAOH    | 1|  |  |  |  10|
+HIT:P|SYNARIOX  | 2| 1| 3|  |  23|
+SHOT:P|SYNARIOX  |  |  | 1|  |  10|
+END HIT LIST
+TOTAL HIT
+13|15|22| 7| 212|
+TOTAL SHOT
+16| 5|27| 5| 530|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+KARIKOU   
+Game|player NR
+TEAM      |23
+Centre Shots
+ 463|11|12|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  418
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+RACAOH    
+PACK ID
+25
+START HIT LIST
+HIT:R|DDPINCH   |  |  |  | 1|   3|
+SHOT:R|DDPINCH   | 1|  | 1|  |  20|
+HIT:R|BARDA     | 1| 1| 1|  |  12|
+SHOT:R|BARDA     | 1|  |  |  |  10|
+HIT:R|JUJU      | 1|  | 1| 1|  11|
+SHOT:R|JUJU      |  |  | 3| 2|  50|
+HIT:R|JULIEN    |  |  | 2| 2|  12|
+SHOT:R|JULIEN    | 2|  | 1| 3|  60|
+HIT:R|SUIJIN    | 2| 2| 3|  |  27|
+SHOT:R|SUIJIN    |  | 1|  | 2|  30|
+HIT:R|DIAMKAPPA | 1| 2| 1| 4|  28|
+SHOT:R|DIAMKAPPA |  | 1| 5| 1|  70|
+HIT:R|ZOZO      |  | 2| 3| 1|  20|
+HIT:B|KARIKOU   | 1|  |  |  |   5|
+SHOT:B|KARIKOU   | 1| 1|  | 1|  30|
+HIT:B|AOLYN     | 1|  | 2|  |  11|
+SHOT:B|AOLYN     | 1| 1| 1|  |  30|
+HIT:B|EL DOUCHE |  |  | 2| 1|   9|
+SHOT:B|EL DOUCHE | 1| 1|  | 1|  30|
+HIT:B|THECHOSENS|  | 1| 1| 2|  13|
+SHOT:B|THECHOSENS| 1| 1| 3|  |  50|
+HIT:B|MANU      | 2| 1| 2| 1|  23|
+SHOT:B|MANU      | 2| 1|  | 1|  40|
+HIT:B|EL MACHO  |  | 2| 3| 1|  20|
+SHOT:B|EL MACHO  | 3| 2| 1| 2|  80|
+HIT:B|LE MAESTRO|  |  | 1|  |   3|
+SHOT:B|LE MAESTRO| 1| 1|  | 1|  30|
+HIT:B|DRAK      | 1| 1| 1|  |  12|
+END HIT LIST
+TOTAL HIT
+10|12|23|14| 209|
+TOTAL SHOT
+14|10|15|14| 530|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+RACAOH    
+Game|player NR
+TEAM      |23
+Centre Shots
+ 652| 8|13|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  401
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+THECHOSENS
+PACK ID
+28
+START HIT LIST
+HIT:R|DDPINCH   |  |  | 1|  |   3|
+SHOT:R|DDPINCH   |  |  |  | 2|  20|
+HIT:R|BARDA     | 1| 1|  | 1|  12|
+SHOT:R|BARDA     |  |  | 1|  |  10|
+HIT:R|JUJU      |  | 1|  |  |   4|
+SHOT:R|JUJU      | 1| 2| 1| 1|  50|
+HIT:R|JULIEN    |  |  | 2| 1|   9|
+SHOT:R|JULIEN    | 1|  | 1| 1|  30|
+HIT:R|SUIJIN    | 1|  | 1| 1|  11|
+HIT:R|DIAMKAPPA |  |  | 5| 1|  18|
+SHOT:R|DIAMKAPPA | 1| 1| 4| 2|  80|
+HIT:R|ZOZO      |  | 1| 2| 1|  13|
+SHOT:R|ZOZO      | 1| 1| 2| 1|  50|
+HIT:P|MASTER SHI| 4|  | 4| 2|  38|
+SHOT:P|MASTER SHI|  | 1| 4| 1|  60|
+HIT:P|POULPOUZOU| 2|  | 1|  |  13|
+SHOT:P|POULPOUZOU| 1| 1| 2|  |  40|
+HIT:P|JOHNNY    | 2| 1| 1|  |  17|
+SHOT:P|JOHNNY    | 1|  | 2| 1|  40|
+HIT:P|FISTOUILLE| 3| 1| 3| 2|  34|
+SHOT:P|FISTOUILLE| 1|  | 1| 1|  30|
+HIT:P|UNICORN FO|  |  | 2| 2|  12|
+SHOT:P|UNICORN FO| 2| 1| 3|  |  60|
+HIT:P|GIBSOU    |  | 1|  | 1|   7|
+HIT:P|RACAOH    | 1| 1| 3|  |  18|
+SHOT:P|RACAOH    |  | 1| 1| 2|  40|
+HIT:P|SYNARIOX  | 1| 1| 3| 2|  24|
+SHOT:P|SYNARIOX  | 1|  |  | 1|  20|
+END HIT LIST
+TOTAL HIT
+15| 8|28|14| 233|
+TOTAL SHOT
+10| 8|22|13| 530|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+THECHOSENS
+Game|player NR
+TEAM      |23
+Centre Shots
+ 373|14|14|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  397
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+EL MACHO  
+PACK ID
+30
+START HIT LIST
+HIT:R|DDPINCH   |  |  | 1| 2|   9|
+SHOT:R|DDPINCH   |  | 1|  |  |  10|
+HIT:R|BARDA     |  |  | 3|  |   9|
+SHOT:R|BARDA     |  | 1| 1|  |  20|
+HIT:R|JUJU      | 2|  |  | 1|  13|
+SHOT:R|JUJU      | 3|  | 1|  |  40|
+HIT:R|JULIEN    |  |  | 1|  |   3|
+SHOT:R|JULIEN    |  |  | 1| 2|  30|
+HIT:R|SUIJIN    | 1| 1| 1| 2|  18|
+SHOT:R|SUIJIN    | 1| 1| 1| 1|  40|
+HIT:R|DIAMKAPPA | 2| 1| 2|  |  20|
+SHOT:R|DIAMKAPPA | 1|  | 1| 1|  30|
+HIT:R|ZOZO      |  |  | 4| 1|  15|
+SHOT:R|ZOZO      | 1|  | 3|  |  40|
+HIT:P|MASTER SHI|  | 1| 1|  |   7|
+SHOT:P|MASTER SHI| 1|  | 3| 2|  60|
+HIT:P|POULPOUZOU| 1|  |  |  |   5|
+SHOT:P|POULPOUZOU|  | 2|  |  |  20|
+HIT:P|JOHNNY    |  | 2| 2|  |  14|
+SHOT:P|JOHNNY    | 1| 2| 2| 1|  60|
+HIT:P|FISTOUILLE| 2| 1| 3| 2|  29|
+SHOT:P|FISTOUILLE|  | 1| 3|  |  40|
+HIT:P|UNICORN FO|  | 1|  |  |   4|
+SHOT:P|UNICORN FO|  |  |  | 1|  10|
+HIT:P|GIBSOU    |  |  | 1|  |   3|
+SHOT:P|GIBSOU    |  |  | 3|  |  30|
+HIT:P|RACAOH    | 3| 2| 1| 2|  32|
+SHOT:P|RACAOH    |  | 2| 3| 1|  60|
+HIT:P|SYNARIOX  | 2| 1| 5| 1|  32|
+SHOT:P|SYNARIOX  |  | 1|  |  |  10|
+END HIT LIST
+TOTAL HIT
+13|10|25|11| 213|
+TOTAL SHOT
+ 8|11|22| 9| 500|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+EL MACHO  
+Game|player NR
+TEAM      |23
+Centre Shots
+ 417|11|15|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  387
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+GIBSOU    
+PACK ID
+17
+START HIT LIST
+HIT:R|DDPINCH   |  |  | 4| 2|  18|
+SHOT:R|DDPINCH   | 1|  | 2|  |  30|
+HIT:R|BARDA     | 4|  | 4| 3|  41|
+SHOT:R|BARDA     | 2| 1| 3|  |  60|
+HIT:R|JUJU      |  |  | 4| 1|  15|
+SHOT:R|JUJU      | 4|  | 3|  |  70|
+HIT:R|JULIEN    |  | 1| 1|  |   7|
+SHOT:R|JULIEN    | 2| 1| 2|  |  50|
+HIT:R|SUIJIN    | 2| 1| 5| 2|  35|
+SHOT:R|SUIJIN    |  | 1| 3| 2|  60|
+HIT:R|DIAMKAPPA | 1| 2| 2|  |  19|
+SHOT:R|DIAMKAPPA | 1|  | 1|  |  20|
+SHOT:R|ZOZO      |  |  | 1|  |  10|
+HIT:B|KARIKOU   | 1|  | 1|  |   8|
+SHOT:B|KARIKOU   |  | 1| 2|  |  30|
+HIT:B|AOLYN     |  | 1|  | 1|   7|
+SHOT:B|AOLYN     |  |  | 1|  |  10|
+HIT:B|EL DOUCHE |  | 2| 2| 2|  20|
+SHOT:B|EL DOUCHE | 1| 1| 1|  |  30|
+SHOT:B|THECHOSENS|  | 1|  | 1|  20|
+HIT:B|MANU      | 1| 1|  |  |   9|
+SHOT:B|MANU      |  | 1|  |  |  10|
+HIT:B|EL MACHO  |  |  | 3|  |   9|
+SHOT:B|EL MACHO  |  |  | 1|  |  10|
+HIT:B|LE MAESTRO| 1|  | 1|  |   8|
+SHOT:B|LE MAESTRO| 2|  | 1| 3|  60|
+HIT:B|DRAK      | 3|  | 1|  |  18|
+SHOT:B|DRAK      | 1| 2|  | 1|  40|
+END HIT LIST
+TOTAL HIT
+13| 8|28|11| 214|
+TOTAL SHOT
+14| 9|21| 7| 510|
+BEGIN ADVERTS
+TON RANG : Le tireur fou, on t'appelle "Lucky luke"!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+GIBSOU    
+Game|player NR
+TEAM      |23
+Centre Shots
+ 526| 9|16|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  386
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+JOHNNY    
+PACK ID
+14
+START HIT LIST
+HIT:R|DDPINCH   | 2| 2| 6| 3|  45|
+SHOT:R|DDPINCH   | 2| 1| 6| 1| 100|
+HIT:R|BARDA     | 1|  | 3| 2|  20|
+SHOT:R|BARDA     |  |  | 3|  |  30|
+HIT:R|JUJU      |  |  |  | 1|   3|
+SHOT:R|JUJU      |  |  | 1|  |  10|
+HIT:R|JULIEN    | 1|  | 2|  |  11|
+SHOT:R|JULIEN    | 1|  | 1|  |  20|
+HIT:R|SUIJIN    |  |  | 3| 2|  15|
+SHOT:R|SUIJIN    |  |  |  | 1|  10|
+HIT:R|DIAMKAPPA |  | 2|  |  |   8|
+SHOT:R|DIAMKAPPA | 2|  | 1|  |  30|
+HIT:R|ZOZO      |  |  | 3|  |   9|
+SHOT:R|ZOZO      | 2|  |  |  |  20|
+HIT:B|KARIKOU   | 2| 1| 5|  |  29|
+SHOT:B|KARIKOU   |  | 1| 2| 1|  40|
+HIT:B|AOLYN     |  | 1| 2|  |  10|
+SHOT:B|AOLYN     |  | 2| 1| 1|  40|
+HIT:B|EL DOUCHE | 2| 5| 3|  |  39|
+SHOT:B|EL DOUCHE | 2|  | 3|  |  50|
+HIT:B|THECHOSENS| 1|  | 2| 1|  14|
+SHOT:B|THECHOSENS| 2| 1| 1|  |  40|
+HIT:B|MANU      | 1| 1| 3|  |  18|
+SHOT:B|MANU      | 1|  | 3| 1|  50|
+HIT:B|EL MACHO  | 1| 2| 2| 1|  22|
+SHOT:B|EL MACHO  |  | 2| 2|  |  40|
+HIT:B|LE MAESTRO| 1|  | 1|  |   8|
+SHOT:B|LE MAESTRO| 1| 1|  | 1|  30|
+HIT:B|DRAK      | 2| 1| 4|  |  26|
+SHOT:B|DRAK      |  |  | 1|  |  10|
+END HIT LIST
+TOTAL HIT
+14|15|39|10| 277|
+TOTAL SHOT
+13| 8|25| 6| 520|
+BEGIN ADVERTS
+TON RANG :SUPER MARIO Un poil plus et tu sauves Peach!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+JOHNNY    
+Game|player NR
+TEAM      |23
+Centre Shots
+ 545| 9|17|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  333
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+JULIEN    
+PACK ID
+21
+START HIT LIST
+HIT:B|KARIKOU   |  | 1| 2| 1|  13|
+SHOT:B|KARIKOU   | 1| 2| 2|  |  50|
+HIT:B|AOLYN     |  | 1|  | 3|  13|
+SHOT:B|AOLYN     |  |  | 1|  |  10|
+HIT:B|EL DOUCHE | 2| 1| 3| 1|  26|
+SHOT:B|EL DOUCHE | 1|  | 1| 1|  30|
+HIT:B|THECHOSENS| 1|  | 1| 1|  11|
+SHOT:B|THECHOSENS|  |  | 2| 1|  30|
+HIT:B|MANU      |  |  |  | 1|   3|
+SHOT:B|MANU      |  |  | 1|  |  10|
+HIT:B|EL MACHO  |  |  | 1| 2|   9|
+SHOT:B|EL MACHO  |  |  | 1|  |  10|
+HIT:B|LE MAESTRO| 1|  | 1|  |   8|
+SHOT:B|LE MAESTRO| 1| 1| 2| 2|  60|
+HIT:B|DRAK      | 1| 2| 1|  |  16|
+HIT:P|MASTER SHI| 1|  | 1| 1|  11|
+SHOT:P|MASTER SHI|  |  | 2| 1|  30|
+HIT:P|POULPOUZOU|  | 1|  |  |   4|
+SHOT:P|POULPOUZOU| 1| 1|  |  |  20|
+HIT:P|JOHNNY    | 1|  | 1|  |   8|
+SHOT:P|JOHNNY    | 1|  | 2|  |  30|
+HIT:P|FISTOUILLE|  | 1| 3|  |  13|
+SHOT:P|FISTOUILLE|  |  | 1| 2|  30|
+HIT:P|UNICORN FO| 1|  | 2| 1|  14|
+SHOT:P|UNICORN FO| 1| 1| 2| 1|  50|
+HIT:P|GIBSOU    | 2| 1| 2|  |  20|
+SHOT:P|GIBSOU    |  | 1| 1|  |  20|
+HIT:P|RACAOH    | 2|  | 1| 3|  22|
+SHOT:P|RACAOH    |  |  | 2| 2|  40|
+HIT:P|SYNARIOX  | 3|  | 2| 4|  33|
+SHOT:P|SYNARIOX  | 1| 1| 2| 1|  50|
+END HIT LIST
+TOTAL HIT
+15| 8|21|18| 224|
+TOTAL SHOT
+ 7| 7|22|11| 470|
+BEGIN ADVERTS
+TON RANG :SUPER MARIO Un poil plus et tu sauves Peach!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+JULIEN    
+Game|player NR
+TEAM      |23
+Centre Shots
+ 534| 8|18|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  326
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+AOLYN     
+PACK ID
+26
+START HIT LIST
+HIT:R|DDPINCH   | 1| 3|  |  |  17|
+SHOT:R|DDPINCH   | 1|  |  | 2|  30|
+HIT:R|BARDA     | 2|  |  | 1|  13|
+SHOT:R|BARDA     |  | 1| 1| 1|  30|
+HIT:R|JUJU      | 1|  | 1|  |   8|
+SHOT:R|JUJU      | 2| 1|  | 2|  50|
+HIT:R|JULIEN    |  |  | 1|  |   3|
+SHOT:R|JULIEN    |  | 1|  | 3|  40|
+HIT:R|SUIJIN    |  | 2| 1| 3|  20|
+SHOT:R|SUIJIN    | 1| 1|  |  |  20|
+HIT:R|DIAMKAPPA | 3|  |  |  |  15|
+SHOT:R|DIAMKAPPA | 2|  | 3| 1|  60|
+HIT:R|ZOZO      | 2|  | 1|  |  13|
+SHOT:R|ZOZO      | 1| 1| 1|  |  30|
+HIT:P|MASTER SHI| 3| 2| 4| 1|  38|
+SHOT:P|MASTER SHI| 2|  | 2| 1|  50|
+HIT:P|POULPOUZOU| 1| 1|  |  |   9|
+SHOT:P|POULPOUZOU| 1|  |  | 1|  20|
+HIT:P|JOHNNY    |  | 2| 1| 1|  14|
+SHOT:P|JOHNNY    |  | 1| 2|  |  30|
+HIT:P|FISTOUILLE|  | 2| 4|  |  20|
+SHOT:P|FISTOUILLE|  |  | 1|  |  10|
+HIT:P|UNICORN FO| 1| 1| 2|  |  15|
+SHOT:P|UNICORN FO|  | 2| 1| 1|  40|
+HIT:P|GIBSOU    |  |  | 1|  |   3|
+SHOT:P|GIBSOU    |  | 1|  | 1|  20|
+HIT:P|RACAOH    | 1| 1| 1|  |  12|
+SHOT:P|RACAOH    | 1|  | 2|  |  30|
+HIT:P|SYNARIOX  | 5| 1| 7| 2|  56|
+SHOT:P|SYNARIOX  |  | 1|  | 1|  20|
+END HIT LIST
+TOTAL HIT
+20|15|24| 8| 256|
+TOTAL SHOT
+11|10|13|14| 480|
+BEGIN ADVERTS
+TON RANG :SUPER MARIO Un poil plus et tu sauves Peach!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+AOLYN     
+Game|player NR
+TEAM      |23
+Centre Shots
+ 471|10|19|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  324
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+UNICORN FO
+PACK ID
+16
+START HIT LIST
+HIT:R|DDPINCH   |  | 1|  | 1|   7|
+SHOT:R|DDPINCH   | 1|  |  |  |  10|
+HIT:R|BARDA     | 2| 2| 2| 2|  30|
+SHOT:R|BARDA     | 2|  |  |  |  20|
+HIT:R|JUJU      | 1| 1|  | 1|  12|
+SHOT:R|JUJU      | 1| 1| 2| 2|  60|
+HIT:R|JULIEN    | 1| 1| 2| 1|  18|
+SHOT:R|JULIEN    | 1|  | 2| 1|  40|
+HIT:R|SUIJIN    | 2| 2|  | 1|  21|
+SHOT:R|SUIJIN    | 2|  |  |  |  20|
+HIT:R|DIAMKAPPA | 1| 4| 1| 1|  27|
+SHOT:R|DIAMKAPPA | 2| 1|  | 1|  40|
+HIT:R|ZOZO      | 1|  | 1|  |   8|
+SHOT:R|ZOZO      |  |  | 1|  |  10|
+HIT:B|KARIKOU   | 2| 1| 2|  |  20|
+SHOT:B|KARIKOU   |  | 1| 2| 1|  40|
+HIT:B|AOLYN     |  | 2| 1| 1|  14|
+SHOT:B|AOLYN     | 1| 1| 2|  |  40|
+HIT:B|EL DOUCHE |  |  |  | 1|   3|
+SHOT:B|EL DOUCHE |  |  |  | 1|  10|
+HIT:B|THECHOSENS| 2| 1| 3|  |  23|
+SHOT:B|THECHOSENS|  |  | 2| 2|  40|
+HIT:B|MANU      |  |  | 1|  |   3|
+SHOT:B|MANU      | 2|  |  |  |  20|
+HIT:B|EL MACHO  |  |  |  | 1|   3|
+SHOT:B|EL MACHO  |  | 1|  |  |  10|
+HIT:B|LE MAESTRO| 1|  | 1|  |   8|
+SHOT:B|LE MAESTRO|  |  |  | 2|  20|
+HIT:B|DRAK      |  | 1|  | 2|  10|
+SHOT:B|DRAK      | 3|  |  |  |  30|
+END HIT LIST
+TOTAL HIT
+13|16|14|12| 207|
+TOTAL SHOT
+15| 5|11|10| 410|
+BEGIN ADVERTS
+TON RANG :SUPER MARIO Un poil plus et tu sauves Peach!!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+UNICORN FO
+Game|player NR
+TEAM      |23
+Centre Shots
+ 423| 9|20|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  293
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+POULPOUZOU
+PACK ID
+13
+START HIT LIST
+HIT:R|DDPINCH   | 3| 1| 2|  |  25|
+SHOT:R|DDPINCH   | 3|  | 1| 1|  50|
+HIT:R|BARDA     | 2|  | 2| 2|  22|
+SHOT:R|BARDA     | 2|  |  |  |  20|
+HIT:R|JUJU      | 2|  |  |  |  10|
+HIT:R|JULIEN    | 1| 1|  |  |   9|
+SHOT:R|JULIEN    |  | 1|  |  |  10|
+HIT:R|SUIJIN    | 4| 1| 2| 1|  33|
+SHOT:R|SUIJIN    | 1|  | 1|  |  20|
+HIT:R|DIAMKAPPA | 1|  | 4|  |  17|
+SHOT:R|DIAMKAPPA | 2|  | 1| 1|  40|
+HIT:R|ZOZO      |  |  | 1|  |   3|
+SHOT:R|ZOZO      | 1| 1|  |  |  20|
+HIT:B|KARIKOU   | 3| 1| 2| 1|  28|
+SHOT:B|KARIKOU   | 1| 1| 2|  |  40|
+HIT:B|AOLYN     | 1|  |  | 1|   8|
+SHOT:B|AOLYN     | 1| 1|  |  |  20|
+HIT:B|EL DOUCHE |  | 2| 2|  |  14|
+SHOT:B|EL DOUCHE | 2|  | 2| 1|  50|
+HIT:B|THECHOSENS| 1| 1| 2|  |  15|
+SHOT:B|THECHOSENS| 2|  | 1|  |  30|
+HIT:B|MANU      | 1| 2| 1| 1|  19|
+SHOT:B|MANU      |  |  | 2|  |  20|
+HIT:B|EL MACHO  |  | 2|  |  |   8|
+SHOT:B|EL MACHO  | 1|  |  |  |  10|
+HIT:B|LE MAESTRO| 1| 1| 1|  |  12|
+SHOT:B|LE MAESTRO| 3|  | 1|  |  40|
+HIT:B|DRAK      |  | 2| 6| 1|  29|
+END HIT LIST
+TOTAL HIT
+20|14|25| 7| 252|
+TOTAL SHOT
+19| 4|11| 3| 370|
+BEGIN ADVERTS
+TON RANG : Jeune JEDI ton maître est fier de tes debuts!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+POULPOUZOU
+Game|player NR
+TEAM      |23
+Centre Shots
+ 351|10|21|
+Colour
+Purple     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  218
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+JUJU      
+PACK ID
+20
+START HIT LIST
+HIT:B|KARIKOU   | 1|  | 4| 1|  20|
+HIT:B|AOLYN     | 2| 1|  | 2|  20|
+SHOT:B|AOLYN     | 1|  | 1|  |  20|
+HIT:B|EL DOUCHE | 3|  | 1|  |  18|
+SHOT:B|EL DOUCHE |  | 1| 3| 1|  50|
+HIT:B|THECHOSENS| 1| 2| 1| 1|  19|
+SHOT:B|THECHOSENS|  | 1|  |  |  10|
+HIT:B|MANU      | 3|  | 4| 2|  33|
+SHOT:B|MANU      | 1| 1| 1| 1|  40|
+HIT:B|EL MACHO  | 3|  | 1|  |  18|
+SHOT:B|EL MACHO  | 2|  |  | 1|  30|
+SHOT:B|LE MAESTRO| 2|  |  |  |  20|
+HIT:P|MASTER SHI| 3| 1| 1| 2|  28|
+SHOT:P|MASTER SHI|  |  | 3| 1|  40|
+SHOT:P|POULPOUZOU| 2|  |  |  |  20|
+HIT:P|JOHNNY    |  |  | 1|  |   3|
+SHOT:P|JOHNNY    |  |  |  | 1|  10|
+HIT:P|FISTOUILLE| 2| 1|  | 3|  23|
+SHOT:P|FISTOUILLE|  | 2|  |  |  20|
+HIT:P|UNICORN FO| 1| 1| 2| 2|  21|
+SHOT:P|UNICORN FO| 1| 1|  | 1|  30|
+HIT:P|GIBSOU    | 4|  | 3|  |  29|
+SHOT:P|GIBSOU    |  |  | 4| 1|  50|
+HIT:P|RACAOH    |  |  | 3| 2|  15|
+SHOT:P|RACAOH    | 1|  | 1| 1|  30|
+HIT:P|SYNARIOX  | 3| 1| 2| 4|  37|
+SHOT:P|SYNARIOX  |  | 1|  | 2|  30|
+END HIT LIST
+TOTAL HIT
+26| 7|23|19| 284|
+TOTAL SHOT
+10| 7|13|10| 400|
+BEGIN ADVERTS
+TON RANG : Jeune JEDI ton maître est fier de tes debuts!
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+JUJU      
+Game|player NR
+TEAM      |23
+Centre Shots
+ 260|15|22|
+Colour
+Red       0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+  216
+score_game.game_name
+TEAM
+score_game.num_players
+23
+score_game.start_time
+1475780676
+score_game.redScore
+3878
+score_game.greenScore
+3527
+score_game.mixedScore
+0
+score_game.purpleScore
+4876
+score_players[playerIndex].alias
+LE MAESTRO
+PACK ID
+31
+START HIT LIST
+HIT:R|DDPINCH   | 1| 3| 2| 2|  29|
+HIT:R|BARDA     | 1| 2| 5| 1|  31|
+SHOT:R|BARDA     | 1|  | 3|  |  40|
+HIT:R|JUJU      | 2|  |  |  |  10|
+HIT:R|JULIEN    | 1| 1| 2| 2|  21|
+SHOT:R|JULIEN    | 1|  | 1|  |  20|
+HIT:R|SUIJIN    | 3| 2| 3| 1|  35|
+SHOT:R|SUIJIN    | 2| 1| 1|  |  40|
+HIT:R|DIAMKAPPA | 2| 1|  | 2|  20|
+HIT:R|ZOZO      | 1| 1| 3| 2|  24|
+HIT:P|MASTER SHI| 3| 1| 1|  |  22|
+HIT:P|POULPOUZOU| 3|  | 1|  |  18|
+SHOT:P|POULPOUZOU| 1| 1| 1|  |  30|
+HIT:P|JOHNNY    | 1| 1|  | 1|  12|
+SHOT:P|JOHNNY    | 1|  | 1|  |  20|
+HIT:P|FISTOUILLE|  | 2|  | 1|  11|
+SHOT:P|FISTOUILLE| 1|  |  |  |  10|
+HIT:P|UNICORN FO|  |  |  | 2|   6|
+SHOT:P|UNICORN FO| 1|  | 1|  |  20|
+HIT:P|GIBSOU    | 2|  | 1| 3|  22|
+SHOT:P|GIBSOU    | 1|  | 1|  |  20|
+HIT:P|RACAOH    | 1| 1|  | 1|  12|
+SHOT:P|RACAOH    |  |  | 1|  |  10|
+HIT:P|SYNARIOX  | 1|  | 3| 5|  29|
+SHOT:P|SYNARIOX  |  | 2| 1|  |  30|
+END HIT LIST
+TOTAL HIT
+22|15|21|23| 302|
+TOTAL SHOT
+ 9| 4|11| 0| 240|
+BEGIN ADVERTS
+TON RANG : Jeune Pikachu 
+DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
+LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
+END ADVERTS
+Date
+06/10/16 21:04
+Name
+LE MAESTRO
+Game|player NR
+TEAM      |23
+Centre Shots
+ 289| 8|23|
+Colour
+Blue     0
+TEAM BIT
+ 3878 3527    0 4876
+SCORE
+   18
