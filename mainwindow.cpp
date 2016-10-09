@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     _authWidget->setLayout(_authLayout);
 
-    connect(_connection, SIGNAL(clicked()), this, SLOT(getToken()));
+    connect(_connection, SIGNAL(clicked()), this, SLOT(sl_getToken()));
 
     //Page d'accueil
     _homeWidget = new QWidget();
@@ -64,6 +64,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
     //WebService
     _api = new ApiService();
     connect(_api, SIGNAL(responseReceived(QByteArray)), this, SLOT(handleApiResponse(QByteArray)));
+    _logManager = new LogManager(_logs);
 }
 
 MainWindow::~MainWindow()
@@ -111,7 +112,7 @@ void MainWindow::setViewIndex(int index) {
     setView(p);
 }
 
-void MainWindow::getToken() {
+void MainWindow::sl_getToken() {
     QString username = _login->text();
     QString password = _password->text();
 
@@ -119,6 +120,8 @@ void MainWindow::getToken() {
 }
 
 void MainWindow::handleApiResponse(QByteArray response) {
+    qDebug() << response;
+
     QJsonDocument document = QJsonDocument::fromJson(response);
     QJsonObject object = document.object();
 
@@ -133,6 +136,7 @@ void MainWindow::handleApiResponse(QByteArray response) {
             _logged = true;
             _token = object.value("token").toString();
             _setLoginSuccess(tr("Connexion effectuée avec succès."));
+            this->watchLaserFile();
         }
     } else if ( action == "logout" ) {
         if ( !success ) {
@@ -149,9 +153,6 @@ void MainWindow::handleApiResponse(QByteArray response) {
 
         }
     }
-
-    qDebug() << response;
-
 }
 
 void MainWindow::_setLoginError(QString s) {
@@ -160,4 +161,22 @@ void MainWindow::_setLoginError(QString s) {
 
 void MainWindow::_setLoginSuccess(QString s) {
     _loginOutput->setText("<span style='color: green'>" + s + "</span>");
+}
+
+void MainWindow::watchLaserFile() {
+#ifdef QT_DEBUG
+    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
+#else
+    QString path = "C:/"; //TODO
+#endif
+    FileWatcher *fw = new FileWatcher();
+    connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
+    fw->watch(path);
+    qDebug() << "Watching laser file";
+}
+
+void MainWindow::sl_fileContentCanged(QString content) {
+    qDebug() << "New content: " << content;
+    _logManager->log("Contenu du fichier envoyé à la base de données");
+    this->_api->submit(content, _token);
 }

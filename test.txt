@@ -1,0 +1,3 @@
+Emile: 150
+Joker: 300
+Zozo: 600

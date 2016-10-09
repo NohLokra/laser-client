@@ -18,7 +18,7 @@ ApiService::~ApiService()
 }
 
 void ApiService::generateToken(QString user, QString password) {
-    QUrl finalUrl(this->_baseUrl + QString("generateToken")); //On initialise la requête avec l'url qui génère les tokens
+    QUrl finalUrl = this->_generateFullUrl("generateToken"); //On initialise la requête avec l'url qui génère les tokens
     QNetworkRequest request(finalUrl);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
 
@@ -28,7 +28,35 @@ void ApiService::generateToken(QString user, QString password) {
     this->_networkManager->post(request, postDatas);
 }
 
+void ApiService::submit(QString text, QString token) {
+    QUrl finalUrl = this->_generateFullUrl("submit");
+    QNetworkRequest request(finalUrl);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+
+    QByteArray postDatas;
+    postDatas.append("token=" + token + "&datas=" + text);
+
+    this->_networkManager->post(request, postDatas);
+}
+
+void ApiService::logout(QString token) {
+    QUrl url = this->_generateFullUrl("logout");
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+
+    QByteArray postDatas;
+    postDatas.append("token=" + token);
+
+    this->_networkManager->post(request, postDatas);
+}
+
 void ApiService::sl_requestFinished(QNetworkReply* r) {
     if ( r->error() ) emit this->responseReceived(QByteArray(r->errorString().toStdString().c_str()));
     else emit this->responseReceived(r->readAll());
 }
+
+QUrl ApiService::_generateFullUrl(QString action) {
+    return this->_baseUrl + action;
+}
+
