@@ -328,6 +328,6 @@ QJsonObject ScoreParser::jsonParse()
 
 ScoreParser::~ScoreParser()
 {
-
+    delete _game;
 }
 
