@@ -11,9 +11,6 @@
 #include <QFormLayout>
 #include <QMenuBar>
 #include <QStackedWidget>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QJsonArray>
 #include <QJsonValue>
 
 #include "apiservice.h"
@@ -48,7 +45,7 @@ public slots:
     void setViewOnHome();
     void handleApiResponse(QByteArray);
     void sl_getToken();
-    void sl_fileContentCanged(QString content);
+    void sl_fileContentChanged(QString content);
 
 private:
     //Navigation

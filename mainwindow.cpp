@@ -172,13 +172,14 @@ void MainWindow::watchLaserFile() {
     QString path = "C:/"; //TODO
 #endif
     FileWatcher *fw = new FileWatcher();
-    connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
     fw->watch(path);
+
+    connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentChanged(QString)));
 }
 
-void MainWindow::sl_fileContentCanged(QString content) {
+void MainWindow::sl_fileContentChanged(QString content) {
     ScoreParser sp(content);
 
     _logManager->log("Contenu du fichier envoyé à la base de données");
-    this->_api->submit(content, _token);
+    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Compact), _token);
 }
