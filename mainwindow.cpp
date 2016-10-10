@@ -2,6 +2,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 {
+
     //Navigation
     _mainWidget = new QStackedWidget();
 
@@ -165,18 +166,19 @@ void MainWindow::_setLoginSuccess(QString s) {
 
 void MainWindow::watchLaserFile() {
 #ifdef QT_DEBUG
-    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
+    // QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
+    QString path = "E:/Programmation/C++/Qt/laser_save/LQM_COM_FILE.TXT";
 #else
     QString path = "C:/"; //TODO
 #endif
     FileWatcher *fw = new FileWatcher();
     connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentCanged(QString)));
     fw->watch(path);
-    qDebug() << "Watching laser file";
 }
 
 void MainWindow::sl_fileContentCanged(QString content) {
-    qDebug() << "New content: " << content;
+    ScoreParser sp(content);
+
     _logManager->log("Contenu du fichier envoyé à la base de données");
     this->_api->submit(content, _token);
 }

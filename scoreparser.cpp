@@ -8,6 +8,7 @@ Row::Row(QString line) : _line(line)
     _type = subParts[0] == "HIT" ? HIT : SHOT;
 
     //On teste la couleur pour déterminer la team
+    _playerTeamLetter = subParts[1];
     if ( subParts[1] == "R" )
         _playerTeam = RED;
     else if ( subParts[1] == "B" )
@@ -16,7 +17,6 @@ Row::Row(QString line) : _line(line)
         _playerTeam = PURPLE;
     else if ( subParts[1] == "M" )
         _playerTeam = MIXED;
-    else throw "Unsupported team color";
 
     _playerName = parts[1].trimmed();
     _frontCount = parts[2].toInt();
@@ -30,49 +30,300 @@ RowType Row::getType() {
     return _type;
 }
 
+QString Row::getTypeString()
+{
+    return _type == SHOT ? "shot" : "hit";
+}
+
 int Row::getTotal() {
     return _total;
 }
 
-Player::Player(QString name) : _name(name), _shots(), _hits(), _score(0), _ratio(0) {
+QJsonObject Row::toJson()
+{
+    QJsonObject row
+    {
+        {"front", _frontCount},
+        {"rear", _rearCount},
+        {"shoulder", _shoulderCount},
+        {"laser", _laserCount},
+        {"total", _total},
+        {"player_name", _playerName},
+        {"player_team", _playerTeamLetter}
+    };
 
+    return row;
+}
+
+Player::Player(QString infos) : _name(), _shots(), _hits(), _score(0), _ratio(0) {
+    QStringList lines = infos.split("\n");
+    lines.removeAll("");
+
+    _name = lines[0].trimmed();
+    _packNumber = lines[2].toInt();
+    _score = lines[lines.indexOf("SCORE")+1].trimmed().toInt();
+
+    QStringList shotParts = lines[lines.indexOf("Centre Shots")+1].split("|");
+    _nbShots = shotParts[0].toInt();
+    _ratio = shotParts[1].toInt();
+    _ranking = shotParts[2].toInt();
+
+    QString color = lines[lines.indexOf("Colour")+1].replace(QRegExp("[\\d]"), "").trimmed();
+    if ( color.toUpper() == "RED" )
+        _teamColor = RED;
+    else if ( color.toUpper() == "BLUE" )
+        _teamColor = BLUE;
+    else if ( color.toUpper() == "MIXED" )
+        _teamColor = MIXED;
+    else if ( color.toUpper() == "PURPLE" )
+        _teamColor = PURPLE;
+
+
+    int startHitList = lines.indexOf("START HIT LIST");
+    for ( int i = startHitList+1 ; lines[i] != "END HIT LIST" ; i++ ) // On boucle sur les listes de tirs donnés/reçus
+    {
+        QString line = lines[i];
+        addRow(line);
+    }
+}
+
+QString Player::getName() {
+    return _name;
 }
 
 void Player::addRow(Row r) {
     if ( r.getType() == SHOT ) {
         _shots.push_back(r);
-        _score += r.getTotal();
     } else {
         _hits.push_back(r);
-        _score -= r.getTotal();
     }
-
-    qDebug() << "Current score for " << _name << ": " << _score;
 }
 
-void Player::setRatio(int ratio) {
-    _ratio = ratio;
-    int bonus = ratio * 10;
-    if ( bonus > 100 )
-        _score += 100;
+TeamColor Player::getTeamColor() {
+    return _teamColor;
+}
+
+QJsonObject Player::toJson()
+{
+    QJsonObject player
+    {
+        {"score", _score},
+        {"name", _name},
+        {"ratio", _ratio},
+        {"pack_number", _packNumber},
+        {"nb_shots", _nbShots},
+        {"ranking", _ranking}
+    };
+
+    QJsonArray shots;
+    for ( int i = 0 ; i < shots.size() ; i++ )
+        QMessageBox::information(NULL, QString("titre"), QJsonDocument(_shots[i].toJson()).toJson(QJsonDocument::Compact));
+
+    QJsonArray hits;
+    for ( int i = 0 ; i < hits.size() ; i++ )
+        hits.append(_hits[i].toJson());
+
+    player.insert("shots", shots);
+    player.insert("hits", hits);
+
+    return player;
+}
+
+Team::Team(TeamColor color, int score) : _color(color), _players(), _score(score)
+{
+
+}
+
+void Team::addPlayer(Player p) {
+    _players.push_back(p);
+}
+
+TeamColor Team::getColor() {
+    return _color;
+}
+
+int Team::size() {
+    return _players.size();
+}
+
+vector<Player> Team::getPlayers() {
+    return _players;
+}
+
+int Team::getScore() {
+    return _score;
+}
+
+QString Team::getColorString()
+{
+    if ( _color == RED )
+        return "red";
+    else if ( _color == BLUE )
+        return "blue";
+    else if ( _color == MIXED )
+        return "mixed";
     else
-        _score += bonus;
+        return "purple";
+}
+
+QJsonObject Team::toJson()
+{
+    QJsonObject team
+    {
+        {"color", getColorString()},
+        {"score", getScore()}
+    };
+
+    QJsonArray players;
+    for ( unsigned int i = 0 ; i < _players.size() ; i++ )
+    {
+        players.append(_players[i].toJson());
+    }
+
+    team.insert("players", players);
+
+    return team;
+}
+
+int Team::getPlayersCount()
+{
+    return _players.size();
+}
+
+Game::Game(QString gameDetails) {
+    QStringList details = gameDetails.split("\n");
+    for ( int i = 0 ; i < details.size() ; i++ ) {
+        if ( details[i] == "score_game.game_name" )
+        {
+            _name = details[i+1].trimmed();
+        }
+        else if ( details[i] == "score_game.num_players" )
+        {
+            _numPlayers = details[i+1].toInt();
+        }
+        else if ( details[i] == "score_game.start_time" )
+        {
+            _timestamp = details[i+1].toInt();
+        }
+        else if ( details[i] == "score_game.redScore" )
+        {
+            _redScore = details[i+1].toInt();
+            if ( !hasTeam(RED) )
+                addTeam(Team(RED, _redScore));
+        }
+        else if ( details[i] == "score_game.greenScore" ) //Je suppute que green ça soit les bleus
+        {
+            _blueScore = details[i+1].toInt();
+            if ( !hasTeam(BLUE) )
+                addTeam(Team(BLUE, _blueScore));
+        }
+        else if ( details[i] == "score_game.mixedScore" )
+        {
+            _mixedScore = details[i+1].toInt();
+            if ( !hasTeam(MIXED) )
+                addTeam(Team(MIXED, _mixedScore));
+        }
+        else if ( details[i] == "score_game.purpleScore" )
+        {
+            _purpleScore = details[i+1].toInt();
+            if ( !hasTeam(PURPLE) )
+                addTeam(Team(PURPLE, _purpleScore));
+        }
+    }
+}
+
+bool Game::hasTeam(TeamColor color) {
+    bool result = false;
+    for ( unsigned int i = 0 ; i < _teams.size() ; i++ ) {
+        if ( _teams[i].getColor() == color )
+            result = true;
+    }
+
+    return result;
+}
+
+void Game::addTeam(Team t)
+{
+    _teams.push_back(t);
+}
+
+Team* Game::getTeam(TeamColor color) {
+    for ( unsigned int i = 0 ; i < _teams.size() ; i++ ) {
+        if ( _teams[i].getColor() == color )
+            return &_teams[i];
+    }
+
+    return NULL;
+}
+
+vector<Team> Game::getTeams() {
+    return _teams;
+}
+
+QJsonObject Game::toJson()
+{
+    QJsonObject object
+    {
+        {"numPlayers", _numPlayers},
+        {"timestamp", _timestamp},
+        {"name", _name},
+        {"scores", QJsonObject{
+                {"blue", _blueScore},
+                {"red", _redScore},
+                {"mixed", _mixedScore},
+                {"purple", _purpleScore}
+            }
+        }
+    };
+
+    qDebug() << "Début de game encodé avec succès";
+    qDebug() << "Début de l'encodage des teams";
+
+    QJsonArray teams;
+    for ( unsigned int i = 0 ; i < _teams.size() ; i++ )
+    {
+        Team teamToEncode = _teams[i];
+        if ( teamToEncode.getPlayersCount() > 0 )
+        {
+            QJsonObject encodedTeam = _teams[i].toJson();
+            teams.append(encodedTeam);
+            qDebug() << "Team " << _teams[i].getColorString() << " encodée avec succès:\n" << encodedTeam << "\n\n";
+        }
+    }
+
+    object.insert("teams", teams);
+
+    return object;
 }
 
 ScoreParser::ScoreParser(QString fileContent) : _text(fileContent)
 {
-    QStringList parts = fileContent.split("score_players[playerIndex].alias");
-    qDebug() << parts;
+    QStringList parts = _text.split("score_players[playerIndex].alias");
 
-    QString text = "HIT:R|DDPINCH   | 2|  | 1|  |  13|\n            SHOT:R|DDPINCH   | 1| 2| 6|  |  90|\n            HIT:R|BARDA     | 1|  | 8| 2|  35|\n            SHOT:R|BARDA     | 1| 1|12|11| 250|\n            HIT:R|JUJU      |  | 1|  | 2|  10|\n            SHOT:R|JUJU      | 3| 1| 2| 4| 100|\n            HIT:R|JULIEN    | 1| 1| 2| 1|  18|\n            SHOT:R|JULIEN    | 3|  | 2| 4|  90|\n            HIT:R|SUIJIN    | 2|  | 2| 1|  19|\n            SHOT:R|SUIJIN    | 4| 5| 8| 8| 250|\n            HIT:R|DIAMKAPPA | 1| 1|  | 1|  12|\n            SHOT:R|DIAMKAPPA | 1| 1| 5|  |  70|\n            HIT:R|ZOZO      | 1|  |  | 2|  11|\n            SHOT:R|ZOZO      | 2|  | 3| 2|  70|\n            HIT:B|KARIKOU   |  |  | 1|  |   3|\n            SHOT:B|KARIKOU   | 2| 1| 3|  |  60|\n            HIT:B|AOLYN     |  | 1|  | 1|   7|\n            SHOT:B|AOLYN     | 5| 1| 7| 2| 150|\n            HIT:B|EL DOUCHE | 2| 1| 4| 1|  29|\n            SHOT:B|EL DOUCHE | 6| 2| 8| 4| 200|\n            HIT:B|THECHOSENS| 1|  |  | 1|   8|\n            SHOT:B|THECHOSENS| 1| 1| 3| 2|  70|\n            HIT:B|MANU      |  |  | 2|  |   6|\n            SHOT:B|MANU      | 1| 3| 5| 1| 100|\n            HIT:B|EL MACHO  |  | 1|  |  |   4|\n            SHOT:B|EL MACHO  | 2| 1| 5| 1|  90|\n            HIT:B|LE MAESTRO|  | 2| 1|  |  11|\n            SHOT:B|LE MAESTRO| 1|  | 3| 5|  90|\n            HIT:B|DRAK      | 3|  | 2|13|  60|\n            SHOT:B|DRAK      | 5| 3| 8| 4| 200|";
-    QStringList rows = text.split("\n");
+    QString gameDetails = parts[0]; //On initialise notre instance de Game avec les détails dans parts[0]
+    Game* game = new Game(gameDetails);
 
-    Player p("Zozo");
-    p.setRatio(7);
-    for ( int i = 0 ; i < rows.length() ; i++ ) {
-        qDebug() << rows[i].trimmed();
-        p.addRow(Row(rows[i].trimmed()));
+    for ( int i = 1 ; i < parts.size() ; i++ ) { //On part de 1 car parts[0] contient ls détails de la game
+        Player p(parts[i]);
+
+        Team* playerTeam = game->getTeam(p.getTeamColor()); //On récup l'équipe du joueur et on l'ajoute dedans
+        playerTeam->addPlayer(p);
     }
+
+    _game = game;
+
+    qDebug() << this->jsonParse();
+}
+
+Game ScoreParser::parse() {
+    return *_game;
+}
+
+QJsonObject ScoreParser::jsonParse()
+{
+    QJsonObject game = _game->toJson();
+
+    return game;
 }
 
 ScoreParser::~ScoreParser()

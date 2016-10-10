@@ -4,7 +4,8 @@ SOURCES += \
     apiservice.cpp \
     scoreparser.cpp \
     filewatcher.cpp \
-    logmanager.cpp
+    logmanager.cpp \
+    jsonencodable.cpp
 
 QT += widgets network
 
@@ -13,4 +14,7 @@ HEADERS += \
     apiservice.h \
     scoreparser.h \
     filewatcher.h \
-    logmanager.h
+    logmanager.h \
+    jsonencodable.h
+
+CONFIG += c++11

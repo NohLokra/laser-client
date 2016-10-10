@@ -20,6 +20,7 @@
 #include "filewatcher.h"
 #include "mainwindow.h"
 #include "logmanager.h"
+#include "scoreparser.h"
 
 enum Page {
     Home = 0,
