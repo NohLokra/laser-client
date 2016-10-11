@@ -276,9 +276,6 @@ QJsonObject Game::toJson()
         }
     };
 
-    qDebug() << "Début de game encodé avec succès";
-    qDebug() << "Début de l'encodage des teams";
-
     QJsonArray teams;
     for ( unsigned int i = 0 ; i < _teams.size() ; i++ )
     {
@@ -287,7 +284,6 @@ QJsonObject Game::toJson()
         {
             QJsonObject encodedTeam = _teams[i].toJson();
             teams.append(encodedTeam);
-            qDebug() << "Team " << _teams[i].getColorString() << " encodée avec succès:\n" << encodedTeam << "\n\n";
         }
     }
 
@@ -311,8 +307,6 @@ ScoreParser::ScoreParser(QString fileContent) : _text(fileContent)
     }
 
     _game = game;
-
-    qDebug() << this->jsonParse();
 }
 
 Game ScoreParser::parse() {
@@ -328,6 +322,6 @@ QJsonObject ScoreParser::jsonParse()
 
 ScoreParser::~ScoreParser()
 {
-    delete _game;
+
 }
 

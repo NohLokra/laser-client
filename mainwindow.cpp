@@ -149,9 +149,9 @@ void MainWindow::handleApiResponse(QByteArray response) {
         }
     } else if ( action == "submit" ) {
         if ( !success ) {
-
+            _logManager->error("Le fichier n'a pas été transmis correctement. Erreur: " + object.value("error").toString());
         } else {
-
+            _logManager->log("Contenu du fichier envoyé à la base de données");
         }
     }
 }
@@ -180,6 +180,5 @@ void MainWindow::watchLaserFile() {
 void MainWindow::sl_fileContentChanged(QString content) {
     ScoreParser sp(content);
 
-    _logManager->log("Contenu du fichier envoyé à la base de données");
-    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Compact), _token);
+    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented), _token);
 }

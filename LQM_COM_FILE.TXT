@@ -13,7 +13,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-SYNARIOX  
+SYNARIOX
 PACK ID
 33
 START HIT LIST
@@ -60,7 +60,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-SYNARIOX  
+SYNARIOX
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -86,7 +86,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-DRAK      
+DRAK
 PACK ID
 34
 START HIT LIST
@@ -128,7 +128,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-DRAK      
+DRAK
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -194,7 +194,7 @@ TOTAL HIT
 TOTAL SHOT
 24|22|30|16| 920|
 BEGIN ADVERTS
-TON RANG : HERO bientôt un nouveau Expendable!??
+TON RANG : HERO bientï¿½t un nouveau Expendable!??
 DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
 LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
 END ADVERTS
@@ -227,7 +227,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-BARDA     
+BARDA
 PACK ID
 19
 START HIT LIST
@@ -269,14 +269,14 @@ TOTAL HIT
 TOTAL SHOT
 25|11|43|23|1020|
 BEGIN ADVERTS
-TON RANG : HERO bientôt un nouveau Expendable!??
+TON RANG : HERO bientï¿½t un nouveau Expendable!??
 DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
 LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
 END ADVERTS
 Date
 06/10/16 21:04
 Name
-BARDA     
+BARDA
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -302,7 +302,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-SUIJIN    
+SUIJIN
 PACK ID
 22
 START HIT LIST
@@ -350,7 +350,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-SUIJIN    
+SUIJIN
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -448,7 +448,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-ZOZO      
+ZOZO
 PACK ID
 32
 START HIT LIST
@@ -494,7 +494,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-ZOZO      
+ZOZO
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -520,7 +520,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-DIAMKAPPA 
+DIAMKAPPA
 PACK ID
 23
 START HIT LIST
@@ -568,7 +568,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-DIAMKAPPA 
+DIAMKAPPA
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -594,7 +594,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-DDPINCH   
+DDPINCH
 PACK ID
 18
 START HIT LIST
@@ -642,7 +642,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-DDPINCH   
+DDPINCH
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -668,7 +668,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-EL DOUCHE 
+EL DOUCHE
 PACK ID
 27
 START HIT LIST
@@ -715,7 +715,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-EL DOUCHE 
+EL DOUCHE
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -741,7 +741,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-MANU      
+MANU
 PACK ID
 29
 START HIT LIST
@@ -788,7 +788,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-MANU      
+MANU
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -814,7 +814,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-KARIKOU   
+KARIKOU
 PACK ID
 24
 START HIT LIST
@@ -860,7 +860,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-KARIKOU   
+KARIKOU
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -886,7 +886,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-RACAOH    
+RACAOH
 PACK ID
 25
 START HIT LIST
@@ -931,7 +931,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-RACAOH    
+RACAOH
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1028,7 +1028,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-EL MACHO  
+EL MACHO
 PACK ID
 30
 START HIT LIST
@@ -1075,7 +1075,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-EL MACHO  
+EL MACHO
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1101,7 +1101,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-GIBSOU    
+GIBSOU
 PACK ID
 17
 START HIT LIST
@@ -1146,7 +1146,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-GIBSOU    
+GIBSOU
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1172,7 +1172,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-JOHNNY    
+JOHNNY
 PACK ID
 14
 START HIT LIST
@@ -1219,7 +1219,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-JOHNNY    
+JOHNNY
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1245,7 +1245,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-JULIEN    
+JULIEN
 PACK ID
 21
 START HIT LIST
@@ -1293,7 +1293,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-JULIEN    
+JULIEN
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1319,7 +1319,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-AOLYN     
+AOLYN
 PACK ID
 26
 START HIT LIST
@@ -1366,7 +1366,7 @@ END ADVERTS
 Date
 06/10/16 21:04
 Name
-AOLYN     
+AOLYN
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1503,7 +1503,7 @@ TOTAL HIT
 TOTAL SHOT
 19| 4|11| 3| 370|
 BEGIN ADVERTS
-TON RANG : Jeune JEDI ton maître est fier de tes debuts!
+TON RANG : Jeune JEDI ton maï¿½tre est fier de tes debuts!
 DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
 LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
 END ADVERTS
@@ -1536,7 +1536,7 @@ score_game.mixedScore
 score_game.purpleScore
 4876
 score_players[playerIndex].alias
-JUJU      
+JUJU
 PACK ID
 20
 START HIT LIST
@@ -1573,14 +1573,14 @@ TOTAL HIT
 TOTAL SHOT
 10| 7|13|10| 400|
 BEGIN ADVERTS
-TON RANG : Jeune JEDI ton maître est fier de tes debuts!
+TON RANG : Jeune JEDI ton maï¿½tre est fier de tes debuts!
 DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
 LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
 END ADVERTS
 Date
 06/10/16 21:04
 Name
-JUJU      
+JUJU
 Game|player NR
 TEAM      |23
 Centre Shots
@@ -1641,7 +1641,7 @@ TOTAL HIT
 TOTAL SHOT
  9| 4|11| 0| 240|
 BEGIN ADVERTS
-TON RANG : Jeune Pikachu 
+TON RANG : Jeune Pikachu
 DECOUVREZ LE MODE IMMERSIF ICOMBAT!20e/pers POUR 8JOUEURS
 LA REVOLUTION LASER VOUS ATTENDS !REJOIGNEZ LA COMMUNAUTE
 END ADVERTS

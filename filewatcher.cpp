@@ -35,6 +35,6 @@ void FileWatcher::sl_fileChanged(QString path) {
 
     QString fileContent(fileBytesContent);
 
+    qDebug() << "Le nouveau contenu a été émis";
     emit fileContentChanged(fileContent);
-    qDebug() << "Variable content émise: " << fileContent;
 }
