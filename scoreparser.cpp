@@ -116,8 +116,9 @@ QJsonObject Player::toJson()
     };
 
     QJsonArray shots;
+    qDebug() << "Joueur " << _name << " touché " << _hits.size() << " fois.";
     for ( int i = 0 ; i < shots.size() ; i++ )
-        QMessageBox::information(NULL, QString("titre"), QJsonDocument(_shots[i].toJson()).toJson(QJsonDocument::Compact));
+        shots.append(_shots[i].toJson());
 
     QJsonArray hits;
     for ( int i = 0 ; i < hits.size() ; i++ )
