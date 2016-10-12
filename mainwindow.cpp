@@ -167,7 +167,7 @@ void MainWindow::_setLoginSuccess(QString s) {
 void MainWindow::watchLaserFile() {
 #ifdef QT_DEBUG
     // QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
-    QString path = "E:/Programmation/C++/Qt/laser_save/LQM_COM_FILE.TXT";
+    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/LQM_COM_FILE.TXT";
 #else
     QString path = "C:/"; //TODO
 #endif

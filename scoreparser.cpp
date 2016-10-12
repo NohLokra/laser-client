@@ -52,6 +52,7 @@ QJsonObject Row::toJson()
         {"player_team", _playerTeamLetter}
     };
 
+    qDebug() << row;
     return row;
 }
 
