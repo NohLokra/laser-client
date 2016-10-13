@@ -116,12 +116,11 @@ QJsonObject Player::toJson()
     };
 
     QJsonArray shots;
-    qDebug() << "Joueur " << _name << " touché " << _hits.size() << " fois.";
-    for ( int i = 0 ; i < shots.size() ; i++ )
+    for ( unsigned int i = 0 ; i < _shots.size() ; i++ )
         shots.append(_shots[i].toJson());
 
     QJsonArray hits;
-    for ( int i = 0 ; i < hits.size() ; i++ )
+    for ( unsigned int i = 0 ; i < _hits.size() ; i++ )
         hits.append(_hits[i].toJson());
 
     player.insert("shots", shots);
