@@ -266,15 +266,9 @@ QJsonObject Game::toJson()
     {
         {"numPlayers", _numPlayers},
         {"timestamp", _timestamp},
-        {"name", _name},
-        {"scores", QJsonObject{
-                {"blue", _blueScore},
-                {"red", _redScore},
-                {"mixed", _mixedScore},
-                {"purple", _purpleScore}
-            }
-        }
+        {"name", _name}
     };
+
 
     QJsonArray teams;
     for ( unsigned int i = 0 ; i < _teams.size() ; i++ )
@@ -288,6 +282,8 @@ QJsonObject Game::toJson()
     }
 
     object.insert("teams", teams);
+
+    qDebug() << object.value("scores");
 
     return object;
 }
