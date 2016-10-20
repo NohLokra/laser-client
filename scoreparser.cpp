@@ -2,7 +2,9 @@
 
 Row::Row(QString line) : _line(line)
 {
+
     QStringList parts = line.split("|");
+    qDebug() << parts;
 
     QStringList subParts = parts[0].split(":"); // HIT:R par exemple, si on a été touché par un rouge
     _type = subParts[0] == "HIT" ? HIT : SHOT;
@@ -19,11 +21,11 @@ Row::Row(QString line) : _line(line)
         _playerTeam = MIXED;
 
     _playerName = parts[1].trimmed();
-    _frontCount = parts[2].toInt();
-    _rearCount = parts[3].toInt();
-    _shoulderCount = parts[4].toInt();
-    _laserCount = parts[5].toInt();
-    _total = parts[6].toInt();
+    _frontCount = parts[2].trimmed().toInt();
+    _rearCount = parts[3].trimmed().toInt();
+    _shoulderCount = parts[4].trimmed().toInt();
+    _laserCount = parts[5].trimmed().toInt();
+    _total = parts[6].trimmed().toInt();
 }
 
 RowType Row::getType() {
@@ -52,7 +54,6 @@ QJsonObject Row::toJson()
         {"player_team", _playerTeamLetter}
     };
 
-    qDebug() << row;
     return row;
 }
 
@@ -118,11 +119,11 @@ QJsonObject Player::toJson()
 
     QJsonArray shots;
     qDebug() << "Joueur " << _name << " touché " << _hits.size() << " fois.";
-    for ( int i = 0 ; i < shots.size() ; i++ )
+    for ( int i = 0 ; i < _shots.size() ; i++ )
         shots.append(_shots[i].toJson());
 
     QJsonArray hits;
-    for ( int i = 0 ; i < hits.size() ; i++ )
+    for ( int i = 0 ; i < _hits.size() ; i++ )
         hits.append(_hits[i].toJson());
 
     player.insert("shots", shots);
