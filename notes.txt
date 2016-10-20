@@ -1,0 +1,36 @@
+Json reçu:
+{
+  numPlayers: Nombre de joueurs
+  timestamp: date et heure de début de la partie
+  name: Nom de la partie (TEAM, TEST, ...)
+  teams: [{
+    color: blue|red|mixed|purple
+    score: points
+    players: [{
+      score:
+      name:
+      ratio:
+      pack_number:
+      nb_shots:
+      ranking:
+      shots: [{
+        front:
+        rear:
+        shoulder:
+        laser:
+        total:
+        player_name:
+        player_team: R|B|P|M
+      }, ...]
+      hits: [{
+        front:
+        rear:
+        shoulder:
+        laser:
+        total:
+        player_name:
+        player_team: R|B|P|M
+      }, ...]
+    }, ...]
+  }, ...]
+}
