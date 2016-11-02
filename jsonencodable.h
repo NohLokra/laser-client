@@ -3,6 +3,7 @@
 
 #include <QJsonObject>
 
+//Classe abstraite dont tout objet contenant une fonction toJson doit implémenter
 class JsonEncodable
 {
 public:
