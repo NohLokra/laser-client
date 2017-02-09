@@ -169,7 +169,7 @@ void MainWindow::watchLaserFile() {
     // QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
     QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/LQM_COM_FILE.TXT";
 #else
-    QString path = "C:/"; //TODO
+    QString path = "C:/"; //TODO locate(LQM_COM_FILE.TXT)
 #endif
     FileWatcher *fw = new FileWatcher();
     fw->watch(path);

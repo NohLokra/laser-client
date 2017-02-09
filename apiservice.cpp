@@ -4,7 +4,7 @@ ApiService::ApiService()
 #ifdef QT_DEBUG
     : QObject(), _baseUrl("http://laser-web.local/api/")
 #else
-    : QObject(), _baseUrl("https://www.laser-web.com/")
+    : QObject(), _baseUrl("https://www.laser-web.com/api/")
 #endif
 {
     this->_networkManager = new QNetworkAccessManager(this);
