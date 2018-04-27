@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     _authWidget->setLayout(_authLayout);
 
-    connect(_connection, SIGNAL(clicked()), this, SLOT(sl_getToken()));
+    connect(_connection, SIGNAL(clicked()), this, SLOT(sl_buttonLoginClicked()));
 
     //Page d'accueil
     _homeWidget = new QWidget();
@@ -64,7 +64,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     //WebService
     _api = new ApiService();
-    connect(_api, SIGNAL(responseReceived(QByteArray)), this, SLOT(handleApiResponse(QByteArray)));
+    connect(_api, SIGNAL(loginComplete(QJsonObject)), this, SLOT(sl_loginComplete(QJsonObject)));
+    connect(_api, SIGNAL(gameSubmitted(QJsonObject)), this, SLOT(sl_gameSubmitted(QJsonObject)));
+
     _logManager = new LogManager(_logs);
 }
 
@@ -108,66 +110,37 @@ void MainWindow::setView(Page p) {
     }
 }
 
-void MainWindow::setViewIndex(int index) {
-    Page p = Page(index);
-    setView(p);
-}
-
-void MainWindow::sl_getToken() {
+void MainWindow::sl_buttonLoginClicked() {
     QString username = _login->text();
     QString password = _password->text();
 
-    _api->generateToken(username, password);
+    _api->login(username, password);
 }
 
-void MainWindow::handleApiResponse(QByteArray response) {
-    qDebug() << response;
+void MainWindow::sl_loginComplete(QJsonObject response) {
+    qDebug() << "Réponse du login" << response;
 
-    QJsonDocument document = QJsonDocument::fromJson(response);
-    QJsonObject object = document.object();
-
-    bool success = object.value("success").toBool(false);
-    QString action = object.value("action").toString();
-
-    if ( action == "login" ) {
-        if ( !success ) {
-            _logged = false;
-            _setLoginError(object.value("error").toString());
-        } else {
-            _logged = true;
-            _token = object.value("token").toString();
-            _setLoginSuccess(tr("Connexion effectuée avec succès."));
-            this->watchLaserFile();
-        }
-    } else if ( action == "logout" ) {
-        if ( !success ) {
-            _setLoginError(tr("Impossible de vous déconnecter"));
-        } else {
-            _setLoginSuccess(tr("Vous avez été déconnecté avec succès."));
-            _logged = false;
-            _token = "";
-        }
-    } else if ( action == "submit" ) {
-        if ( !success ) {
-            _logManager->error("Le fichier n'a pas été transmis correctement. Erreur: " + object.value("error").toString());
-        } else {
-            _logManager->log("Contenu du fichier envoyé à la base de données");
-        }
-    }
+    setLoginSuccess(tr("Vous êtes connecté !"));
+    watchLaserFile();
 }
 
-void MainWindow::_setLoginError(QString s) {
+void MainWindow::sl_gameSubmitted(QJsonObject game) {
+    qDebug() << "Réponse de l'envoi de partie" << game;
+
+    _logManager->log("Contenu du fichier envoyé à la base de données");
+}
+
+void MainWindow::setLoginError(QString s) {
     _loginOutput->setText("<span style='color: red'>Erreur: " + s + "</span>");
 }
 
-void MainWindow::_setLoginSuccess(QString s) {
+void MainWindow::setLoginSuccess(QString s) {
     _loginOutput->setText("<span style='color: green'>" + s + "</span>");
 }
 
 void MainWindow::watchLaserFile() {
 #ifdef QT_DEBUG
-    // QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/test.txt";
-    QString path = "C:/Users/Zozo/Programmation/C++/Qt/laser-client/LQM_COM_FILE.TXT";
+    QString path = "./LQM_COM_FILE.TXT";
 #else
     QString path = "C:/"; //TODO locate(LQM_COM_FILE.TXT)
 #endif
@@ -180,5 +153,5 @@ void MainWindow::watchLaserFile() {
 void MainWindow::sl_fileContentChanged(QString content) {
     ScoreParser sp(content);
 
-    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented), _token);
+    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented));
 }

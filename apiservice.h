@@ -5,6 +5,8 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 class ApiService : public QObject
 {
@@ -12,20 +14,31 @@ class ApiService : public QObject
 public:
     ApiService();
     ~ApiService();
-    void generateToken(QString user, QString password);
-    void submit(QString text, QString token);
-    void logout(QString token);
+    void submit(QString text);
+    void logout();
+    void login(QString username, QString password);
+    bool isConnected();
+    QString getToken();
 
 signals:
-    void responseReceived(QByteArray);
+    void loginComplete(QJsonObject);
+    void gameSubmitted(QJsonObject);
+    void errorOccured(QByteArray);
 
 public slots:
     void sl_requestFinished(QNetworkReply*);
 
 private:
-    QUrl _generateFullUrl(QString action);
+    QUrl _generateFullUrl(QString endpoint);
     QString _baseUrl;
+    QString _apiRoot;
+    QString _token;
     QNetworkAccessManager *_networkManager;
+
+    QString _authEndpoint;
+    QString _gamesEndpoint;
+
+    QJsonObject _resultToJsonObject(QByteArray json);
 };
 
 #endif // APISERVICE_H

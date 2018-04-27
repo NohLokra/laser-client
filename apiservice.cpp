@@ -2,13 +2,12 @@
 
 ApiService::ApiService()
 #ifdef QT_DEBUG
-    : QObject(), _baseUrl("http://laser-web.local/api/")
+    : QObject(), _baseUrl("http://localhost:9000"), _apiRoot("/api"), _token(""), _authEndpoint("/auth/center"), _gamesEndpoint("/games")
 #else
-    : QObject(), _baseUrl("https://www.laser-web.com/api/")
+    : QObject(), _baseUrl("https://www.laser-web.com/api/"), _token(), _authEndpoint("auth/center"), _gamesEndpoint("games")
 #endif
 {
     this->_networkManager = new QNetworkAccessManager(this);
-
     connect(this->_networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(sl_requestFinished(QNetworkReply*)));
 }
 
@@ -17,46 +16,65 @@ ApiService::~ApiService()
 
 }
 
-void ApiService::generateToken(QString user, QString password) {
-    QUrl finalUrl = this->_generateFullUrl("generateToken"); //On initialise la requête avec l'url qui génère les tokens
+void ApiService::submit(QString text) {
+    if ( !isConnected() ) {
+        return;
+    }
+
+    QUrl finalUrl = this->_generateFullUrl(_gamesEndpoint);
     QNetworkRequest request(finalUrl);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
 
     QByteArray postDatas;
-    postDatas.append("username=" + user + "&password=" + password);
+    postDatas.append("token=" + _token + "&datas=" + text);
 
     this->_networkManager->post(request, postDatas);
 }
 
-void ApiService::submit(QString text, QString token) {
-    QUrl finalUrl = this->_generateFullUrl("submit");
-    QNetworkRequest request(finalUrl);
+void ApiService::login(QString username, QString password) {
+    QUrl url = _generateFullUrl(_authEndpoint);
+
+    QString authorization(username + ":" + password);
+    QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    request.setRawHeader("Authorization", "Basic " + authorization.toUtf8().toBase64());
 
-    QByteArray postDatas;
-    postDatas.append("token=" + token + "&datas=" + text);
+    QByteArray postData;
 
-    this->_networkManager->post(request, postDatas);
+    this->_networkManager->post(request, postData);
 }
 
 void ApiService::logout(QString token) {
-    QUrl url = this->_generateFullUrl("logout");
+    _token = "";
+}
 
-    QNetworkRequest request(url);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+bool ApiService::isConnected() {
+    return _token != "";
+}
 
-    QByteArray postDatas;
-    postDatas.append("token=" + token);
-
-    this->_networkManager->post(request, postDatas);
+QString ApiService::getToken() {
+    return _token;
 }
 
 void ApiService::sl_requestFinished(QNetworkReply* r) {
-    if ( r->error() ) emit this->responseReceived(QByteArray(r->errorString().toStdString().c_str()));
-    else emit this->responseReceived(r->readAll());
+    QUrl url = r->url();
+    QString path = url.path();
+
+    qDebug() << path;
+    if ( r->error() ) {
+      emit errorOccured(QByteArray(r->errorString().toStdString().c_str()));
+    } else {
+        QJsonDocument doc = QJsonDocument::fromJson(r->readAll());
+        QJsonObject object = doc.object();
+
+        if ( path == _apiRoot + _authEndpoint ) {
+            emit loginComplete(object);
+        } else if ( path == _apiRoot + _gamesEndpoint ) {
+            emit gameSubmitted(object);
+        }
+    }
 }
 
-QUrl ApiService::_generateFullUrl(QString action) {
-    return this->_baseUrl + action;
+QUrl ApiService::_generateFullUrl(QString endpoint) {
+    return this->_baseUrl + _apiRoot + endpoint;
 }
-

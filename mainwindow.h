@@ -35,17 +35,20 @@ public:
     Page getCurrentView();
     int getCurrentViewIndex();
     void setView(Page);
-    void setViewIndex(int);
     void watchLaserFile();
+    void setLoginError(QString s);
+    void setLoginSuccess(QString s);
 
 signals:
 
 public slots:
     void setViewOnCredentials();
     void setViewOnHome();
-    void handleApiResponse(QByteArray);
-    void sl_getToken();
+
+    void sl_buttonLoginClicked();
     void sl_fileContentChanged(QString content);
+    void sl_loginComplete(QJsonObject);
+    void sl_gameSubmitted(QJsonObject);
 
 private:
     //Navigation
@@ -74,13 +77,8 @@ private:
 
     //Partie WebService
     ApiService *_api;
-    QString _token;
-    bool _logged;
     LogManager* _logManager;
 
-
-    void _setLoginError(QString s);
-    void _setLoginSuccess(QString s);
 };
 
 #endif // MAINWINDOW_H
