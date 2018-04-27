@@ -14,11 +14,12 @@ class ApiService : public QObject
 public:
     ApiService();
     ~ApiService();
-    void submit(QString text);
+    void sendScores(QJsonObject game);
     void logout();
     void login(QString username, QString password);
     bool isConnected();
     QString getToken();
+    void setToken(QString token);
 
 signals:
     void loginComplete(QJsonObject);

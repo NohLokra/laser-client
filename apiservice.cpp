@@ -16,19 +16,22 @@ ApiService::~ApiService()
 
 }
 
-void ApiService::submit(QString text) {
+void ApiService::sendScores(QJsonObject game) {
     if ( !isConnected() ) {
         return;
     }
 
     QUrl finalUrl = this->_generateFullUrl(_gamesEndpoint);
     QNetworkRequest request(finalUrl);
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
-    QByteArray postDatas;
-    postDatas.append("token=" + _token + "&datas=" + text);
+    qDebug() << "Envoi des scores à " << finalUrl.toString();
 
-    this->_networkManager->post(request, postDatas);
+    game.insert("access_token", _token);
+
+    QByteArray postData = QJsonDocument(game).toJson(QJsonDocument::Compact);
+
+    this->_networkManager->post(request, postData);
 }
 
 void ApiService::login(QString username, QString password) {
@@ -44,7 +47,7 @@ void ApiService::login(QString username, QString password) {
     this->_networkManager->post(request, postData);
 }
 
-void ApiService::logout(QString token) {
+void ApiService::logout() {
     _token = "";
 }
 
@@ -60,7 +63,7 @@ void ApiService::sl_requestFinished(QNetworkReply* r) {
     QUrl url = r->url();
     QString path = url.path();
 
-    qDebug() << path;
+    qDebug() << "Réponse de " << path;
     if ( r->error() ) {
       emit errorOccured(QByteArray(r->errorString().toStdString().c_str()));
     } else {
@@ -77,4 +80,8 @@ void ApiService::sl_requestFinished(QNetworkReply* r) {
 
 QUrl ApiService::_generateFullUrl(QString endpoint) {
     return this->_baseUrl + _apiRoot + endpoint;
+}
+
+void ApiService::setToken(QString token) {
+    _token = token;
 }

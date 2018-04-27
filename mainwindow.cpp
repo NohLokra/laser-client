@@ -120,6 +120,8 @@ void MainWindow::sl_buttonLoginClicked() {
 void MainWindow::sl_loginComplete(QJsonObject response) {
     qDebug() << "Réponse du login" << response;
 
+    _api->setToken(response.value("token").toString());
+
     setLoginSuccess(tr("Vous êtes connecté !"));
     watchLaserFile();
 }
@@ -147,11 +149,17 @@ void MainWindow::watchLaserFile() {
     FileWatcher *fw = new FileWatcher();
     fw->watch(path);
 
+    qDebug() << "Surveillance du fichier des scores en place";
+
     connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentChanged(QString)));
 }
 
 void MainWindow::sl_fileContentChanged(QString content) {
     ScoreParser sp(content);
 
-    this->_api->submit(QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented));
+    qDebug() << QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented);
+
+    _api->sendScores(sp.jsonParse());
+
+    qDebug() << "API Appelée";
 }

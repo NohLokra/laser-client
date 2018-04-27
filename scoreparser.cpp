@@ -4,7 +4,6 @@ Row::Row(QString line) : _line(line)
 {
 
     QStringList parts = line.split("|");
-    qDebug() << parts;
 
     QStringList subParts = parts[0].split(":"); // HIT:R par exemple, si on a été touché par un rouge
     _type = subParts[0] == "HIT" ? HIT : SHOT;
@@ -284,8 +283,6 @@ QJsonObject Game::toJson()
     }
 
     object.insert("teams", teams);
-
-    qDebug() << object.value("scores");
 
     return object;
 }
