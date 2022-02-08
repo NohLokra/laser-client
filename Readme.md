@@ -1,18 +1,15 @@
 # Laser Web
 
-## Installation
+## Setup
 
-Récupérer sur ce repo, dans les releases, la dernière version de l'installeur et l'exécuter. Suivant > Suivent > Suivant > Terminer
+The installer for this software can be found in the releases
 
-## Connexion
+## Log in
 
-Au préalable, l'API de LaserWeb doit tourner sur le port 9000 de votre machine (port par défaut)
-Un user ayant pour rôle "admin" ou "manager" dans la base de données
+To be able to login, your LaserWeb account must have the "manager" role
 
-`Attention: Les users avec un role basique ("user") ne peuvent pas se connecter sur le client`
+# Developper's notes
 
-## Watcher le fichier
+## Project dev dependencies
 
-Une fois que l'on est connecté, le fichier est automatiquement watché et dès qu'il est modifié est parsé et envoyé à notre API.
-
-Conclusion: Une fois connecté, il suffit de laisser tourner
+QT version 4+

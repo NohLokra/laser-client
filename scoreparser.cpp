@@ -135,7 +135,7 @@ Team::Team(TeamColor color, int score) : _color(color), _players(), _score(score
 
 }
 
-void Team::addPlayer(Player p) {
+void Team::addPlayer(Player* p) {
     _players.push_back(p);
 }
 
@@ -147,7 +147,7 @@ int Team::size() {
     return _players.size();
 }
 
-vector<Player> Team::getPlayers() {
+vector<Player*> Team::getPlayers() {
     return _players;
 }
 
@@ -178,7 +178,7 @@ QJsonObject Team::toJson()
     QJsonArray players;
     for ( unsigned int i = 0 ; i < _players.size() ; i++ )
     {
-        players.append(_players[i].toJson());
+        players.append(_players[i]->toJson());
     }
 
     team.insert("players", players);
@@ -192,39 +192,42 @@ int Team::getPlayersCount()
 }
 
 Game::Game(QString gameDetails) {
-    QStringList details = gameDetails.split("\n");
-    for ( int i = 0 ; i < details.size() ; i++ ) {
-        if ( details[i] == "score_game.game_name" )
+    QStringList details = gameDetails.trimmed().split("\n");
+    for ( int i = 0 ; i < details.size() ; i += 2 ) {
+        QString key = details[i].trimmed();
+        QString value = details[i+1].trimmed();
+
+        if ( key == "score_game.game_name" )
         {
-            _name = details[i+1].trimmed();
+            _name = value.trimmed();
         }
-        else if ( details[i] == "score_game.num_players" )
+        else if ( key == "score_game.num_players" )
         {
-            _numPlayers = details[i+1].toInt();
+            _numPlayers = value.toInt();
         }
-        else if ( details[i] == "score_game.start_time" )
+        else if ( key == "score_game.start_time" )
         {
             _timestamp = details[i+1].toInt();
         }
-        else if ( details[i] == "score_game.redScore" )
+        else if ( key == "score_game.redScore" )
         {
             _redScore = details[i+1].toInt();
             if ( !hasTeam(RED) )
                 addTeam(Team(RED, _redScore));
         }
-        else if ( details[i] == "score_game.greenScore" ) //Je suppute que green ça soit les bleus
+        else if ( key == "score_game.greenScore" ) //Je suppute que green ça soit les bleus
         {
             _blueScore = details[i+1].toInt();
             if ( !hasTeam(BLUE) )
                 addTeam(Team(BLUE, _blueScore));
         }
-        else if ( details[i] == "score_game.mixedScore" )
+        else if ( key == "score_game.mixedScore" )
         {
             _mixedScore = details[i+1].toInt();
             if ( !hasTeam(MIXED) )
                 addTeam(Team(MIXED, _mixedScore));
         }
-        else if ( details[i] == "score_game.purpleScore" )
+        else if ( key == "score_game.purpleScore" )
         {
             _purpleScore = details[i+1].toInt();
             if ( !hasTeam(PURPLE) )
@@ -295,9 +298,9 @@ ScoreParser::ScoreParser(QString fileContent) : _text(fileContent)
     Game* game = new Game(gameDetails);
 
     for ( int i = 1 ; i < parts.size() ; i++ ) { //On part de 1 car parts[0] contient ls détails de la game
-        Player p(parts[i]);
+        Player *p = new Player(parts[i]);
 
-        Team* playerTeam = game->getTeam(p.getTeamColor()); //On récup l'équipe du joueur et on l'ajoute dedans
+        Team* playerTeam = game->getTeam(p->getTeamColor()); //On récup l'équipe du joueur et on l'ajoute dedans
         playerTeam->addPlayer(p);
     }
 

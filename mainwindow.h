@@ -45,10 +45,10 @@ public slots:
     void setViewOnCredentials();
     void setViewOnHome();
 
-    void sl_buttonLoginClicked();
-    void sl_fileContentChanged(QString content);
-    void sl_loginComplete(QJsonObject);
-    void sl_gameSubmitted(QJsonObject);
+    void onLoginButtonClick();
+    void onFileContentChange(QString content);
+    void onAuthenticationComplete(QJsonObject);
+    void onGameSubmit(QJsonObject);
 
 private:
     //Navigation
@@ -72,13 +72,12 @@ private:
     //Widget pour le panneau d'accueil
     QWidget* _homeWidget;
     QVBoxLayout* _mainLayout;
-    QPushButton* _startStop;
     QTextEdit* _logs;
 
     //Partie WebService
     ApiService *_api;
     LogManager* _logManager;
-
+    FileWatcher* _fileWatcher;
 };
 
 #endif // MAINWINDOW_H

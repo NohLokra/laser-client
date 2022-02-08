@@ -1,8 +1,9 @@
 #include "mainwindow.h"
 
+#include <QDir>
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 {
-
     //Navigation
     _mainWidget = new QStackedWidget();
 
@@ -24,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     _authWidget->setLayout(_authLayout);
 
-    connect(_connection, SIGNAL(clicked()), this, SLOT(sl_buttonLoginClicked()));
+    connect(_connection, SIGNAL(clicked()), this, SLOT(onLoginButtonClick()));
 
     //Page d'accueil
     _homeWidget = new QWidget();
@@ -35,10 +36,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
     _logs->setTextColor(Qt::white);
     _logs->setReadOnly(true);
     _mainLayout->addWidget(_logs);
-
-    _startStop = new QPushButton("Démarrer");
-    _startStop->setCheckable(true);
-    _mainLayout->addWidget(_startStop);
 
     _homeWidget->setLayout(_mainLayout);
 
@@ -64,10 +61,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), _page(Home)
 
     //WebService
     _api = new ApiService();
-    connect(_api, SIGNAL(loginComplete(QJsonObject)), this, SLOT(sl_loginComplete(QJsonObject)));
-    connect(_api, SIGNAL(gameSubmitted(QJsonObject)), this, SLOT(sl_gameSubmitted(QJsonObject)));
+    connect(_api, SIGNAL(loginComplete(QJsonObject)), this, SLOT(onAuthenticationComplete(QJsonObject)));
+    connect(_api, SIGNAL(gameSubmitted(QJsonObject)), this, SLOT(onGameSubmit(QJsonObject)));
 
+    // Instanciate logger
     _logManager = new LogManager(_logs);
+
+    // Instanciate fileWatcher
+    _fileWatcher= new FileWatcher();
 }
 
 MainWindow::~MainWindow()
@@ -110,14 +111,14 @@ void MainWindow::setView(Page p) {
     }
 }
 
-void MainWindow::sl_buttonLoginClicked() {
+void MainWindow::onLoginButtonClick() {
     QString username = _login->text();
     QString password = _password->text();
 
     _api->login(username, password);
 }
 
-void MainWindow::sl_loginComplete(QJsonObject response) {
+void MainWindow::onAuthenticationComplete(QJsonObject response) {
     qDebug() << "Réponse du login" << response;
 
     _api->setToken(response.value("token").toString());
@@ -126,7 +127,7 @@ void MainWindow::sl_loginComplete(QJsonObject response) {
     watchLaserFile();
 }
 
-void MainWindow::sl_gameSubmitted(QJsonObject game) {
+void MainWindow::onGameSubmit(QJsonObject game) {
     qDebug() << "Réponse de l'envoi de partie" << game;
 
     _logManager->log("Contenu du fichier envoyé à la base de données");
@@ -140,26 +141,33 @@ void MainWindow::setLoginSuccess(QString s) {
     _loginOutput->setText("<span style='color: green'>" + s + "</span>");
 }
 
+// Watches the scores file and calls onFileContentChange whenever a change occurs
 void MainWindow::watchLaserFile() {
 #ifdef QT_DEBUG
-    QString path = "./LQM_COM_FILE.TXT";
+    QString path = QString("%1/LQM_COM_FILE.TXT").arg(QDir::currentPath());
 #else
     QString path = "C:/"; //TODO locate(LQM_COM_FILE.TXT)
 #endif
-    FileWatcher *fw = new FileWatcher();
-    fw->watch(path);
 
-    qDebug() << "Surveillance du fichier des scores en place";
+    try {
+        _fileWatcher->watch(path);
 
-    connect(fw, SIGNAL(fileContentChanged(QString)), this, SLOT(sl_fileContentChanged(QString)));
+        _logManager->log(QString("Watching scores at path %1").arg(path));
+    } catch (const string& error) {
+        _logManager->error(QString::fromStdString(error));
+    }
+
+    connect(_fileWatcher, SIGNAL(fileContentChanged(QString)), this, SLOT(onFileContentChange(QString)));
 }
 
-void MainWindow::sl_fileContentChanged(QString content) {
+void MainWindow::onFileContentChange(QString content) {
+    _logManager->log("Scores updated");
+
     ScoreParser sp(content);
 
     qDebug() << QJsonDocument(sp.jsonParse()).toJson(QJsonDocument::Indented);
 
     _api->sendScores(sp.jsonParse());
 
-    qDebug() << "API Appelée";
+    _logManager->log("Scores sent");
 }

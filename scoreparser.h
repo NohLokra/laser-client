@@ -79,10 +79,10 @@ class Team : public JsonEncodable
 {
 public:
     Team(TeamColor color, int score = 0);
-    void addPlayer(Player);
+    void addPlayer(Player*);
     TeamColor getColor();
     int size();
-    vector<Player> getPlayers();
+    vector<Player*> getPlayers();
     int getScore();
     QString getColorString();
     QJsonObject toJson();
@@ -90,7 +90,7 @@ public:
 
 private:
     TeamColor _color;
-    vector<Player> _players;
+    vector<Player*> _players;
     int _score;
 };
 

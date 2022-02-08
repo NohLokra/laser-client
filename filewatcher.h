@@ -20,13 +20,13 @@ public:
     void watch(QString path);
 
 public slots:
-    void sl_fileChanged(QString path);
+    void onFileChange(QString path);
 
 signals:
     void fileContentChanged(const QString content);
 
 private:
-    QString _filePath;
+    bool _isWatching;
 };
 
 #endif // FILEWATCHER_H

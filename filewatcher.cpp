@@ -1,9 +1,7 @@
 #include "filewatcher.h"
 
-FileWatcher::FileWatcher() : QFileSystemWatcher()
+FileWatcher::FileWatcher() : QFileSystemWatcher(), _isWatching(false)
 {
-    _filePath = "";
-    connect(this, SIGNAL(fileChanged(QString)), this, SLOT(sl_fileChanged(QString)));
 }
 
 FileWatcher::~FileWatcher()
@@ -12,16 +10,24 @@ FileWatcher::~FileWatcher()
 }
 
 void FileWatcher::watch(QString path) {
-    if ( this->_filePath == "" ) {
-        this->_filePath = path;
-        this->addPath(this->_filePath);
+    if ( !this->_isWatching ) {
+        this->_isWatching = true;
+        bool isFileWatched = this->addPath(path);
+
+        if ( !isFileWatched ) {
+            qDebug() << "Failed to watch file " << path;
+
+            throw QString("Failed to watch file at path %1").arg(path);
+        }
+
+        connect(this, SIGNAL(fileChanged(QString)), this, SLOT(onFileChange(QString)));
     } else {
         throw "FileWatcher already watching. Call to watch() not allowed";
     }
 }
 
-void FileWatcher::sl_fileChanged(QString path) {
-    qDebug() << "Le fichier " << path << " a changé.";
+void FileWatcher::onFileChange(QString path) {
+    qDebug() << "File content changed";
     QFile file(path);
 
     if ( !file.open(QIODevice::ReadOnly | QIODevice::Text) )
